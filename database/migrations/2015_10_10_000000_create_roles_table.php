@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUsersLogsTable extends Migration
+class CreateRolesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,12 +12,9 @@ class CreateUsersLogsTable extends Migration
      */
     public function up()
     {
-        Schema::create('users_logs', function (Blueprint $table) {
+        Schema::create('roles', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id');
-            $table->string('action');
-            $table->string('action_model')->nullable();
-            $table->integer('action_id')->nullable();
+            $table->string('title');
             $table->timestamps();
         });
     }
@@ -29,6 +26,6 @@ class CreateUsersLogsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('users_logs');
+        Schema::drop('roles');
     }
 }
