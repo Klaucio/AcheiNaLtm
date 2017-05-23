@@ -51,4 +51,14 @@ class User extends Model implements AuthenticatableContract,
     {
         return $this->belongsTo(Role::class);
     }
+    public function publicacao()
+    {
+        return $this->hasMany(Publicacao::class);
+    }
+    public function levantamento()
+    {
+        return $this->hasMany(Levantamento::class);
+    }
+
+
 }
