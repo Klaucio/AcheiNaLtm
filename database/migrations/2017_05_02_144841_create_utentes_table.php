@@ -15,7 +15,6 @@ class CreateUtentesTable extends Migration
     {
         Schema::create('utentes', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('tipo');
             $table->string('nome');
             $table->string('telefone')->unique();
             $table->timestamps();

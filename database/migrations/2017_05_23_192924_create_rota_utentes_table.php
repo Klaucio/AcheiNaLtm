@@ -18,6 +18,7 @@ class CreateRotaUtentesTable extends Migration
             $table->integer('rota_id')->unsigned();
             $table->integer('utente_id')->unsigned();
             $table->date('data_viagem');
+            $table->date('data_embarque');
             $table->foreign('rota_id')->references('id')->on('rotas')->
                     onUpdate('cascade')->onDelete('cascade');
             $table->foreign('utente_id')->references('id')->on('utentes')->

@@ -14,10 +14,13 @@ class CreateUsersTable extends Migration
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->increments('id');
+            $table->integer('id')->unsigned();
+            $table->primary('id');
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
+            $table->foreign('id')->references('id')->on('utentes')->
+            onUpdate('cascade')->onDelete('cascade');
             $table->rememberToken();
             $table->timestamps();
         });
@@ -33,3 +36,4 @@ class CreateUsersTable extends Migration
         Schema::dropIfExists('users');
     }
 }
+

@@ -16,6 +16,9 @@ class CreateItemsTable extends Migration
         Schema::create('items', function (Blueprint $table) {
             $table->increments('id');
             $table->string('designacao');
+            $table->integer('bagagem_id')->unsigned();
+            $table->foreign('bagagem_id')->references('id')->on('bagagems')
+                ->onUpdate('cascade')->onDelete('cascade');
         });
     }
 
