@@ -116,7 +116,7 @@
                             <a href="{{ url('/home') }}">Home</a>
                         @else
                             <a href="{{ url('/login') }}">Login</a>
-                            <a href="{{ url('/register') }}">Register</a>
+                            <a data-toggle="modal" data-target="#centralModalSuccess" href="#">Register</a>
                         @endif
                     </div>
                 @endif

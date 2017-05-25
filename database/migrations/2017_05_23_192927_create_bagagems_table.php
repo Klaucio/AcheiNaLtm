@@ -17,11 +17,10 @@ class CreateBagagemsTable extends Migration
             $table->integer('id')->unsigned();
             $table->primary('id');
 //            $table->integer('bilhet_id'); para caso de erros nas consultas
-            $table->integer('item_id')->unsigned();
+
             $table->foreign('id')->references('id')->on('rota_utentes')
                 ->onUpdate('cascade')->onDelete('cascade');
-            $table->foreign('item_id')->references('id')->on('items')
-                ->onUpdate('cascade')->onDelete('cascade');
+
         });
     }
 
