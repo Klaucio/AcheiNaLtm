@@ -23,6 +23,12 @@
                         <span class="title">{{ trans('quickadmin::admin.partials-sidebar-roles') }}</span>
                     </a>
                 </li>
+                <li @if(Request::path() == 'utentes') class="active" @endif>
+                    <a href="{{ url('utentes') }}">
+                        <i class="fa fa-gavel"></i>
+                        <span class="title">Utentes</span>
+                    </a>
+                </li>
                 <li @if(Request::path() == 'levantamentos') class="active" @endif>
                     <a href="{{ url('achados') }}">
                         <i class="fa fa-gavel"></i>

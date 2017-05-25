@@ -14,3 +14,5 @@
 Route::get('/', function () {
     return view('/home/home');
 });
+Route::resource('utentes', 'UtenteController');
+Route::get('testa','TesteController@testar');

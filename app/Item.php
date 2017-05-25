@@ -7,7 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 class Item extends Model
 {
     //
-//    protected $fillable = ['name', 'email', 'password', 'role_id'];
+    protected $fillable = ['designacao'];
+    public $timestamps=false;
 
     public function bagagem()
     {

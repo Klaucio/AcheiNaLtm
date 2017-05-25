@@ -6,8 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Bagagem extends Model
 {
-    //
-//    protected $fillable = ['name', 'email', 'password', 'role_id'];
+
+    protected $fillable = ['name', 'email', 'password', 'role_id'];
 
     public function rota_utentes()
     {
@@ -20,5 +20,8 @@ class Bagagem extends Model
     public function levantamento()
     {
         return $this->hasOne(Levantamento::class);
+    }
+    public function items(){
+        return $this->hasMany(Item::class);
     }
 }

@@ -13,9 +13,9 @@ class Utente extends Model
     public function user(){
         return $this->hasOne(User::class);
     }
-    public function rotas()
+    public function rotaUtente()
     {
-        return $this->belongsToMany(Rota::class)
+        return $this->belongsToMany(RotaUtente::class)
             ->withTimestamps();
     }
     public function levantamento()
