@@ -295,7 +295,7 @@
                 <!--Body-->
                 <div class="modal-body">
                     <div class="">
-                        {!! Form::open([  'class' => 'form-horizontal','method'=>"POST"]) !!}
+                        {!! Form::open(['route'=>'register',  'class' => 'form-horizontal','method'=>"POST"]) !!}
                         {{ csrf_field() }}
                         {{--<i class="fa fa-check fa-4x mb-1 animated rotateIn"></i>--}}
                         <div class="md-form">
@@ -349,7 +349,7 @@
 
                 <!--Footer-->
                 <div class="modal-footer mdb-gradient justify-content-center">
-                    <button type="button" class="btn btn-default waves-effect">REGISTAR</button>
+                    <submit type="submit" class="btn btn-default waves-effect">REGISTAR</submit>
 
                 </div>
             </div>
