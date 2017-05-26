@@ -23,7 +23,6 @@
                         <span class="title">{{ trans('quickadmin::admin.partials-sidebar-roles') }}</span>
                     </a>
                 </li>
-<<<<<<< HEAD
                 <li @if(Request::path() == 'utentes') class="active" @endif>
                     <a href="{{ url('utentes') }}">
                         <i class="fa fa-gavel"></i>
@@ -48,8 +47,6 @@
                         <span class="title">Levantamentos</span>
                     </a>
                 </li>
-=======
->>>>>>> bf7eb5385137b79d6526da8b36a00033affa731c
                 <li @if(Request::path() == config('quickadmin.route').'/actions') class="active" @endif>
                     <a href="{{ url(config('quickadmin.route').'/actions') }}">
                         <i class="fa fa-users"></i>
