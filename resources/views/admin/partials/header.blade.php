@@ -37,59 +37,57 @@
           href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.standalone.min.css"/>
 
     {{--//fields dinamicos--}}
-    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     {{--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">--}}
     {{--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>--}}
 </head>
 
-<<<<<<< HEAD
 <body class="page-header-fixed">
-<script>
-    $(function () {
-        var scntDiv = $('#dynamicDiv');
+{{--<script>--}}
+    {{--$(function () {--}}
+        {{--var scntDiv = $('#dynamicDiv');--}}
 
-        $(document).on('click', '#addInput', function () {
-            $('<p>'+
-                    '<input type="text" name="designacao" id="inputeste" size="30" value="" placeholder="" />   '+
-                    '<a class="btn btn-danger" href="javascript:void(0)" id="remInput">'+
-                    '<span class="glyphicon glyphicon-minus" aria-hidden="true"></span> '+
-                    ''+
-                    '</a>'+
-                    '</p>').appendTo(scntDiv);
-            return false;
-        });
+        {{--$(document).on('click', '#addInput', function () {--}}
+            {{--$('<p>'+--}}
+                    {{--'<input type="text" name="designacao" id="inputeste" size="30" value="" placeholder="" />   '+--}}
+                    {{--'<a class="btn btn-danger" href="javascript:void(0)" id="remInput">'+--}}
+                    {{--'<span class="glyphicon glyphicon-minus" aria-hidden="true"></span> '+--}}
+                    {{--''+--}}
+                    {{--'</a>'+--}}
+                    {{--'</p>').appendTo(scntDiv);--}}
+            {{--return false;--}}
+        {{--});--}}
 
-        $(document).on('click', '#remInput', function () {
-            $(this).parents('p').remove();
-            return false;
-        });
-    });
-</script>
-<script>
-    $(document).ready(function(){
-        var i=1;
-        $('#add_input').click(function(){
-            i++;
-            $('#dynamic').append('<tr id="row'+i+'"><td><input type="text" name="name[]" placeholder="Enter Your Name" class="form-control name_list"/></td><td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">Remove</button></td></tr>');
-        });
-        $(document).on('click', '.btn_remove', function(){
-            var button_id = $(this).attr("id");
-            $('#row'+button_id+'').remove();
-        });
-        $('#submit').click(function(){
-            $.ajax({
-                url:'{!!URL::to('testa')!!}',
-                method:"POST",
-                data:$('#add_me').serialize(),
-                success: function(data)
-                {
-                    alert(data);
-                    $('#add_me')[0].reset();
-                }
-            });
-        });
-    });
-</script>
-=======
+        {{--$(document).on('click', '#remInput', function () {--}}
+            {{--$(this).parents('p').remove();--}}
+            {{--return false;--}}
+        {{--});--}}
+    {{--});--}}
+{{--</script>--}}
+{{--<script>--}}
+    {{--$(document).ready(function(){--}}
+        {{--var i=1;--}}
+        {{--$('#add_input').click(function(){--}}
+            {{--i++;--}}
+            {{--$('#dynamic').append('<tr id="row'+i+'"><td><input type="text" name="name[]" placeholder="Enter Your Name" class="form-control name_list"/></td><td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">Remove</button></td></tr>');--}}
+        {{--});--}}
+        {{--$(document).on('click', '.btn_remove', function(){--}}
+            {{--var button_id = $(this).attr("id");--}}
+            {{--$('#row'+button_id+'').remove();--}}
+        {{--});--}}
+        {{--$('#submit').click(function(){--}}
+            {{--$.ajax({--}}
+                {{--url:'{!!URL::to('testa')!!}',--}}
+                {{--method:"POST",--}}
+                {{--data:$('#add_me').serialize(),--}}
+                {{--success: function(data)--}}
+                {{--{--}}
+                    {{--alert(data);--}}
+                    {{--$('#add_me')[0].reset();--}}
+                {{--}--}}
+            {{--});--}}
+        {{--});--}}
+    {{--});--}}
+{{--</script>--}}
 <body class="page-header-fixed">
->>>>>>> bf7eb5385137b79d6526da8b36a00033affa731c
+
