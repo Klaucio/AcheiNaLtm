@@ -1,1 +1,8 @@
 /* YOUR CUSTOM STYLES */
+.md-form label.active {
+    font-size: 0.8rem;
+    -webkit-transform: translateY(-60%) !important;
+    -moz-transform: translateY(-60%) !important;
+    -ms-transform: translateY(-60%) !important;
+    -o-transform: translateY(-60%) !important;
+    transform: translateY(-60%) !important; }

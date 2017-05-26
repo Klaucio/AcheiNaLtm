@@ -17,6 +17,7 @@
 
     <!-- Material Design Bootstrap -->
     <link href="{{ url('css')}}/mdb.min.css" rel="stylesheet">
+    <link href="{{ url('css')}}/style.css" rel="stylesheet">
     <!-- Your custom styles (optional) -->
 
     <!-- Template styles -->

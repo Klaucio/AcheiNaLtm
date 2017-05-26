@@ -305,8 +305,8 @@
                         </div>
                         <div class="md-form">
                             <i class="fa fa-user prefix"></i>
-                            {!! Form::text('username', '', ['class'=>'form-control','id'=>'username','value'=>"{{ old('username') }}",'required','autofocus']) !!}
-                            <label for="username">Nome do Utilizador</label>
+                            {!! Form::text('name', '', ['class'=>'form-control','id'=>'name','value'=>"{{ old('name') }}",'required','autofocus']) !!}
+                            <label for="name">Nome do Utilizador</label>
                         </div>
                         <div class="md-form">
                             <i class="fa fa-envelope prefix"></i>
@@ -349,7 +349,7 @@
 
                 <!--Footer-->
                 <div class="modal-footer mdb-gradient justify-content-center">
-                    <submit type="submit" class="btn btn-default waves-effect">REGISTAR</submit>
+                    <button type="submit" class="btn btn-default waves-effect">REGISTAR</button>
 
                 </div>
             </div>

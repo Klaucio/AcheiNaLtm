@@ -16,9 +16,8 @@ class CreateBagagemsTable extends Migration
         Schema::create('bagagems', function (Blueprint $table) {
             $table->integer('id')->unsigned();
             $table->primary('id');
-//            $table->integer('bilhet_id'); para caso de erros nas consultas
-
-            $table->foreign('id')->references('id')->on('rota_utentes')
+            $table->integer('rota_utente_id')->unsigned();
+            $table->foreign('rota_utente_id')->references('id')->on('rota_utentes')
                 ->onUpdate('cascade')->onDelete('cascade');
 
         });
