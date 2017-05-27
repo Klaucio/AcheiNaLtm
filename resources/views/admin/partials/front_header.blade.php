@@ -32,7 +32,7 @@
         /* Navigation*/
 
         .navbar {
-            background-color: transparent;
+            background-color: #3885b4 /* transparent*/;
         }
 
         .top-nav-collapse {
@@ -112,7 +112,7 @@
                     <input class="form-control" type="text" placeholder="Search">
                 </form>
                 @if (Route::has('login'))
-                    <div class="top-right links">
+                    <div class="top-right links ">
                         @if (Auth::check())
                             <a href="{{ url('/home') }}">Home</a>
                         @else

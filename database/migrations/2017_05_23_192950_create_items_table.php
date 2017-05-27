@@ -16,8 +16,12 @@ class CreateItemsTable extends Migration
         Schema::create('items', function (Blueprint $table) {
             $table->increments('id');
             $table->string('designacao');
-            $table->integer('bagagem_id')->unsigned();
+            $table->string('sensibilidade')->nullable();
+            $table->integer('bagagem_id')->unsigned()->nullable();
             $table->foreign('bagagem_id')->references('id')->on('bagagems')
+                ->onUpdate('cascade')->onDelete('cascade');
+            $table->integer('encomenda_id')->unsigned()->nullable();
+            $table->foreign('encomenda_id')->references('id')->on('encomendas')
                 ->onUpdate('cascade')->onDelete('cascade');
         });
     }

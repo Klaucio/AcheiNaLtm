@@ -104,7 +104,7 @@
 
                     <!--Card image-->
                     <div class="view overlay hm-white-slight">
-                        <img src="http://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(120).jpg" class="img-fluid" alt="">
+                        <img src="{{ asset('/img/report_lost.png') }}"  class="img-fluid" alt="">
                         <a href="#">
                             <div class="mask"></div>
                         </a>
@@ -133,7 +133,8 @@
 
                     <!--Card image-->
                     <div class="view overlay hm-white-slight">
-                        <img src="http://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(123).jpg" class="img-fluid" alt="">
+                        <img src="{{ asset('/img/report_found.png') }}"  class="img-fluid" alt="">
+                        {{--<img src="{{ asset('/img/download.jpg') }}"  class="img-responsive img-thumbnail">--}}
                         <a href="#">
                             <div class="mask"></div>
                         </a>
@@ -162,7 +163,7 @@
 
                     <!--Card image-->
                     <div class="view overlay hm-white-slight">
-                        <img src="http://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(122).jpg" class="img-fluid" alt="">
+                        <img src="{{ asset('/img/report_lost.png') }}"  class="img-fluid" alt="">
                         <a href="#">
                             <div class="mask"></div>
                         </a>
