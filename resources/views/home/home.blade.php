@@ -2,8 +2,9 @@
 @extends('admin.partials.front_header')
 @section('title', 'Página Inicial')
 @section('content')
+
     <!--Carousel Wrapper-->
-    <div id="carousel-example-2" class="carousel slide carousel-fade white-text" data-ride="carousel" data-interval="false">
+    <div id="carousel-example-3" class="carousel slide carousel-fade white-text" data-ride="carousel" data-interval="false">
         <!--Indicators-->
         <ol class="carousel-indicators">
             <li data-target="#carousel-example-3" data-slide-to="0" class="active"></li>
@@ -95,6 +96,7 @@
     <!--/.Carousel Wrapper-->
 
     <br>
+
 
         <div class="row">
             <!--First columnn-->
