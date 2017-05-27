@@ -38,7 +38,7 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        {!! Form::text('telefone', 'Telefone', ['class'=>'col-sm-2 control-label']) !!}
+                        {!! Form::label('telefone', 'Telefone', ['class'=>'col-sm-2 control-label']) !!}
                         <div class="col-sm-10">
                             {!! Form::text('telefone', old('telefone'), ['class'=>'form-control', 'placeholder'=> 'Número de Telefone']) !!}
                         </div>
@@ -71,13 +71,9 @@
                         </div>
                     </div>
 
-                    <div class="form-group">
-                        <div class="col-sm-10 col-sm-offset-2">
-                            {!! Form::submit(trans('quickadmin::admin.users-create-btncreate'), ['class' => 'btn btn-primary']) !!}
-                        </div>
-                    </div>
 
-                    {!! Form::close() !!}
+
+
                 </div>
                 <div class="col-sm-2">
                 </div>
@@ -89,10 +85,16 @@
 
         <!--Footer-->
         <div class="modal-footer">
-            <div class="text-center">
-                <button class="btn btn-deep-purple">Login</button>
+            {{--<div class="text-center">--}}
+                {{--<button class="btn ">Login</button>--}}
+            {{--</div>--}}
+            <div class="form-group">
+                <div class="text-center">
+                    {!! Form::submit(trans('quickadmin::admin.users-create-btncreate'), ['class' => 'btn btn-deep-purple']) !!}{{--btn btn-primary--}}
+                </div>
             </div>
         </div>
+        {!! Form::close() !!}
 
     </div>
     <!--/Form with header-->
