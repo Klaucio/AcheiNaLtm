@@ -41,9 +41,20 @@ class UtenteController extends Controller
      */
     public function store(Request $request)
     {
-        $designacao=Input::get('designacao');
-        $total= count($designacao);
-        dd($total);
+//        $yap=$request->name;
+//        foreach($yap as $index=>$value) {
+//            $info = new Info();
+//            $info->name = $yap[$index];
+//            $info->save();
+//        }
+        $designacao=$request->designacao;
+        foreach($designacao as $index=>$value) {
+            $item = new Item();
+            $item ->designacao= $designacao[$index];
+            dd($item );
+//            $info->save();
+        }
+
 
         $item=Item::create($request->all());
         $item->save();
