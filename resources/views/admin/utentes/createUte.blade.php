@@ -80,9 +80,8 @@
 
 
     <form name="add_me" id="add_me">
-        csrf_field()
     <table class="table table-bordered" id="dynamic">
-    <input type="text" name="name[]" id="name" placeholder="Enter Your Name" class="form-control name_list"/>
+    <input type="text" name="designacao[]" id="designacao" placeholder="Enter Your Name" class="form-control name_list"/>
     <button type="button" name="add" id="add_input" class="btn btn-success">Add</button>
     </table>
     <input type="button" name="submit" id="submit" value="Submit"/>
@@ -92,6 +91,7 @@
 @section('javascript')
     <script>
         $(function () {
+
             var scntDiv = $('#dynamicDiv');
 
             $(document).on('click', '#addInput', function () {
@@ -113,10 +113,15 @@
     </script>
     <script>
         $(document).ready(function(){
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
             var i=1;
             $('#add_input').click(function(){
                 i++;
-                $('#dynamic').append('<tr id="row'+i+'"><td><input type="text" name="name[]" placeholder="Enter Your Name" class="form-control name_list"/></td><td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">Remove</button></td></tr>');
+                $('#dynamic').append('<tr id="row'+i+'"><td><input type="text" name="designacao[]" placeholder="Enter Your Name" class="form-control name_list"/></td><td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">Remove</button></td></tr>');
             });
             $(document).on('click', '.btn_remove', function(){
                 var button_id = $(this).attr("id");
