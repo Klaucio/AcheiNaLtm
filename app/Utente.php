@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Utente extends Model
 {
     //
-    protected $fillable=['id','tipo','nome','telefone'];
+    protected $fillable=['id','nome','telefone'];
     public $timestamps=false;
 
     public function user(){

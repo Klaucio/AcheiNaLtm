@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Bagagem;
 use App\Item;
 use App\Rota;
 use App\RotaUtente;
@@ -47,22 +48,35 @@ class UtenteController extends Controller
 //            $info->name = $yap[$index];
 //            $info->save();
 //        }
-        $designacao=$request->designacao;
-        foreach($designacao as $index=>$value) {
-            $item = new Item();
-            $item ->designacao= $designacao[$index];
-            dd($item );
+//        $designacao=$request->designacao;
+//        foreach($designacao as $index=>$value) {
+//            $item = new Item();
+//            $item ->designacao= $designacao[$index];
+//            dd($item );
 //            $info->save();
-        }
-
-
-        $item=Item::create($request->all());
-        $item->save();
+//        }
+           //utente save
         $utente=Utente::create($request->all());
         $request->request->add(['utente_id'=>$utente->id]);
+
+        //bilhete save
         $bilhete=RotaUtente::create($request->all());
         $bilhete->utentes()->associate($utente);
         $bilhete->save();
+
+        //bagagem save
+        $bagagem=Bagagem::create(['id'=>$bilhete->id,'rota_utente_id'=>$bilhete->id]);
+        $bagagem->save();
+
+        //item save
+        $designacao=$request->designacao;
+        foreach($designacao as $index=>$value) {
+            $item = new Item();
+            $item->designacao = $designacao[$index];
+//            $bagagem->items()->save($item);
+            $item->bagagem_id=$bilhete->id;
+            $item->save();
+        }
         return redirect()->route('utentes.index')
             ->with('success',' Registado com Sucesso.');
 

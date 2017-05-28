@@ -7,7 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 class Bagagem extends Model
 {
 
-    protected $fillable = ['name', 'email', 'password', 'role_id'];
+    protected $fillable = ['id', 'rota_utente_id'];
+    public $timestamps=false;
 
     public function rota_utentes()
     {
