@@ -23,6 +23,7 @@ class CreatePublicacaosTable extends Migration
                 ->onUpdate('cascade')->onDelete('cascade');
             $table->string('tipo');
             $table->date('data_viagem');
+            $table->string('estado');
             $table->timestamp('created_at')->default(\DB::raw('CURRENT_TIMESTAMP'));
             $table->timestamp('updated_at')->default(\DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
         });
