@@ -1,8 +1,8 @@
 
-@extends('admin.partials.front_header')
+@extends('admin.partials.client_header')
 @section('title', 'Página Inicial')
-@section('content')
-
+@section('banner')
+@parent
     <!--Carousel Wrapper-->
     <div id="carousel-example-3" class="carousel slide carousel-fade white-text" data-ride="carousel" data-interval="false">
         <!--Indicators-->
@@ -96,8 +96,10 @@
     <!--/.Carousel Wrapper-->
 
     <br>
-
-
+@endsection {{--fim do banner/slide--}}
+    <!--Content-->
+@section('content')
+    <div class="container">
         <div class="row">
             <!--First columnn-->
             <div class="col-lg-4">
@@ -191,177 +193,6 @@
     <!--/.Content-->
 
 
+    @include('auth.user_register_modal')
 
-    <!--Footer-->
-    <footer class="page-footer center-on-small-only">
-
-        <!--Footer Links-->
-        <div class="container-fluid">
-            <div class="row">
-
-                <!--First column-->
-                <div class="col-lg-3 offset-lg-1 hidden-lg-down">
-                    <h5 class="title">ABOUT MATERIAL DESIGN</h5>
-                    <p>Material Design (codenamed Quantum Paper) is a design language developed by Google. </p>
-
-                    <p>Material Design for Bootstrap (MDB) is a powerful Material Design UI KIT for most popular HTML, CSS, and JS framework - Bootstrap.</p>
-                </div>
-                <!--/.First column-->
-
-                <hr class="hidden-md-up">
-
-                <!--Second column-->
-                <div class="col-lg-2 col-md-4 offset-lg-1">
-                    <h5 class="title">Recent Trips</h5>
-                    <ul>
-                        <li><a href="#!">Balkans</a></li>
-                        <li><a href="#!">Tatra Mountains</a></li>
-                        <li><a href="#!">Norway Fjords</a></li>
-                        <li><a href="#!">Baikal Lake</a></li>
-                    </ul>
-                </div>
-                <!--/.Second column-->
-
-                <hr class="hidden-md-up">
-
-                <!--Third column-->
-                <div class="col-lg-2 col-md-4">
-                    <h5 class="title">My guest articles</h5>
-                    <ul>
-                        <li><a href="#!">"Things I learn on the road"</a></li>
-                        <li><a href="#!">"Low-budget traveling made simple"</a></li>
-                        <li><a href="#!">"Talking with locals"</a></li>
-                        <li><a href="#!">"Leaving things behind"</a></li>
-                    </ul>
-                </div>
-                <!--/.Third column-->
-
-                <hr class="hidden-md-up">
-
-                <!--Fourth column-->
-                <div class="col-lg-2 col-md-4">
-                    <h5 class="title">Follow me on</h5>
-                    <ul>
-                        <li><a href="#!">Facebook</a></li>
-                        <li><a href="#!">Instagram</a></li>
-                        <li><a href="#!">Twitter</a></li>
-                        <li><a href="#!">Pinterest</a></li>
-                    </ul>
-                </div>
-                <!--/.Fourth column-->
-
-            </div>
-        </div>
-        <!--/.Footer Links-->
-
-        <hr>
-
-        <!--Call to action-->
-        <div class="call-to-action">
-            <h4>Material Design for Bootstrap</h4>
-            <ul>
-                <li>
-                    <h5>Get our UI KIT for free</h5></li>
-                <li><a target="_blank" href="http://mdbootstrap.com/getting-started/" class="btn btn-info" rel="nofollow">Sign up!</a></li>
-                <li><a target="_blank" href="http://mdbootstrap.com/material-design-for-bootstrap/" class="btn btn-default" rel="nofollow">Learn more</a></li>
-            </ul>
-        </div>
-        <!--/.Call to action-->
-
-        <!--Copyright-->
-        <div class="footer-copyright">
-            <div class="container-fluid">
-                © 2015 Copyright: <a href="http://www.MDBootstrap.com"> MDBootstrap.com </a>
-
-            </div>
-        </div>
-        <!--/.Copyright-->
-
-    </footer>
-    <!--/.Footer-->
-
-    <!-- Button trigger modal -->
-    <!-- Central Modal Medium Success -->
-    <div class="modal fade" id="centralModalSuccess" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-notify " role="document">
-            <!--Content-->
-            <div class="modal-content">
-                <!--Header-->
-                <div class="modal-header form-header mdb-gradient">
-                    <h3><i class="fa fa-user"></i> Registe-Se</h3>
-
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true" class="white-text">&times;</span>
-                    </button>
-                </div>
-
-                <!--Body-->
-                <div class="modal-body">
-                    <div class="">
-                        {!! Form::open(['route'=>'register',  'class' => 'form-horizontal','method'=>"POST"]) !!}
-                        {{ csrf_field() }}
-                        {{--<i class="fa fa-check fa-4x mb-1 animated rotateIn"></i>--}}
-                        <div class="md-form">
-                            <i class="fa fa-user prefix"></i>
-                            {!! Form::text('nome', '', ['class'=>'form-control','id'=>'nome','value'=>"{{ old('nome') }}",'required','autofocus']) !!}
-                            <label for="nome">Nome Completo</label>
-                        </div>
-                        <div class="md-form">
-                            <i class="fa fa-user prefix"></i>
-                            {!! Form::text('name', '', ['class'=>'form-control','id'=>'name','value'=>"{{ old('name') }}",'required','autofocus']) !!}
-                            <label for="name">Nome do Utilizador</label>
-                        </div>
-                        <div class="md-form">
-                            <i class="fa fa-envelope prefix"></i>
-                            {!! Form::email('email', '', ['class'=>'form-control','id'=>'email','value'=>"{{ old('email') }}",'required']) !!}
-                            <label for="email">Email</label>
-                        </div>
-                        <div class="md-form">
-                            <i class="fa fa-phone prefix"></i>
-                            {!! Form::text('telefone', '', ['class'=>'validate']) !!}
-                            <label for="form8">Telefone</label>
-                        </div>
-
-                        <div class="md-form">
-                            <i class="fa fa-lock prefix"></i>
-                            {!! Form::password('password', ['class'=>'form-control','id'=>'password','required']) !!}
-                            <label for="password">Password</label>
-                        </div>
-                        <div class="md-form{{ $errors->has('password_confirmation') ? ' has-error' : '' }}">
-                            <i class="fa fa-lock prefix"></i>
-                            {!! Form::password('password_confirmation', ['class'=>'validade','id'=>'password-confirm','required']) !!}
-                            <label for="password-confirm">Confirme a senha</label>
-                            @if ($errors->has('password_confirmation'))
-                                <span class="help-block">
-                                    <strong>{{ $errors->first('password_confirmation') }}</strong>
-                                </span>
-                            @endif
-                        </div>
-
-
-                        {{--<div class="text-center">--}}
-                            {{--<button class="btn btn-indigo">Sign up</button>--}}
-                            {{--<hr>--}}
-                            {{--<fieldset class="form-group">--}}
-                                {{--<input type="checkbox" id="checkbox1">--}}
-                                {{--<label for="checkbox1">Subscribe me to the newsletter</label>--}}
-                            {{--</fieldset>--}}
-                        {{--</div>--}}
-                    </div>
-                </div>
-
-                <!--Footer-->
-                <div class="modal-footer mdb-gradient justify-content-center">
-                    <button type="submit" class="btn btn-default waves-effect">REGISTAR</button>
-
-                </div>
-            </div>
-        {!! Form::close() !!}
-
-        <!--/.Content-->
-        </div>
-    </div>
-    <!-- Central Modal Medium Success-->
-
-
-@endsection
+{{--@endsection--}}

@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('/home/home');
+    return view('/home/index');
 });
 Route::resource('utentes', 'UtenteController');
 Route::get('testa','TesteController@testar');
