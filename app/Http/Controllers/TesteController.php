@@ -6,11 +6,11 @@ use Illuminate\Http\Request;
 
 class TesteController extends Controller
 {
-    public function testar()
+    public function testar(Request $request)
     {
-        $designacao = Input::get('designacao');
-        $total = count($designacao);
-        dd($total);
+        $designacao=$request->designacao;
+        dd($designacao);
+//        dd($total);
     }
 
 }

@@ -15,4 +15,4 @@ Route::get('/', function () {
     return view('/home/index');
 });
 Route::resource('utentes', 'UtenteController');
-Route::get('testa','TesteController@testar');
+Route::post('testa','TesteController@testar');
