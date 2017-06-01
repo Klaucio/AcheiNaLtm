@@ -15,4 +15,9 @@ Route::get('/', function () {
     return view('/home/home');
 });
 Route::resource('utentes', 'UtenteController');
-Route::post('testa','TesteController@testar');
+Route::resource('achados', 'AchadosController');
+Route::resource('levantamentos', 'LevantamentoController');
+Route::get('searchachados','AchadosController@edit');
+Route::post('updateachados','AchadosController@update');
+Route::get('searchlevant','LevantamentoController@edit');
+Route::post('updatelevant','LevantamentoController@update');

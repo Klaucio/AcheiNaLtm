@@ -29,7 +29,7 @@
                         <span class="title">Utentes</span>
                     </a>
                 </li>
-                <li @if(Request::path() == 'levantamentos') class="active" @endif>
+                <li @if(Request::path() == 'achados') class="active" @endif>
                     <a href="{{ url('achados') }}">
                         <i class="fa fa-gavel"></i>
                         <span class="title">Achados</span>
@@ -40,9 +40,22 @@
                         <i class="fa fa-gavel"></i>
                         <span class="title">Perdidos</span>
                     </a>
+
+                    {{--<ul class="sub-menu">--}}
+
+                            {{--<li class="active active-sub">--}}
+                                {{--<a href="{{url('perdidos') }}">--}}
+                                    {{--<i class="fa fa-briefcase"></i>--}}
+                                    {{--<span class="title">--}}
+                               {{--Registar Achados--}}
+                            {{--</span>--}}
+                                {{--</a>--}}
+                            {{--</li>--}}
+                    {{--</ul>--}}
+
                 </li>
-                <li @if(Request::path() == 'achados') class="active" @endif>
-                    <a href="{{ url('achados') }}">
+                <li @if(Request::path() == 'levantamentos') class="active" @endif>
+                    <a href="{{ url('levantamentos') }}">
                         <i class="fa fa-gavel"></i>
                         <span class="title">Levantamentos</span>
                     </a>

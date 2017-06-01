@@ -4,7 +4,6 @@
 
     <div class="row">
         <div class="col-sm-10 col-sm-offset-2">
-            <h1>{{ trans('quickadmin::admin.roles-create-create_role') }}</h1>
 
             @if ($errors->any())
                 <div class="alert alert-danger">
@@ -15,30 +14,71 @@
                     </ul>
                 </div>
             @endif
+                <div class="form-group col-md-6">
+                    <div class="input-group">
+                        <span class="input-group-addon">Pesquisar</span>
+                        <input type="text" class="form-control" id="search" name="search">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                       <span class="item" margin-right="20">
+                           <form name="add_me" id="add_me">
+
+                           </form>
+
+                        </span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-10 col-sm-offset-2" align="center">
+
+                        <a class="btn btn-lg btn-primary pull-center" id="submit" name="submit">
+                            <span class="glyphicon glyphicon-save" aria-hidden="true"></span>
+                            Salvar
+                        </a>
+                    </div>
+                </div>
         </div>
     </div>
 
-    {!! Form::open(['route' => 'faculdades.store', 'class' => 'form-horizontal']) !!}
-
-    <div class="form-group">
-        {!! Form::label('designacao', 'Designação', ['class'=>'col-sm-2 control-label']) !!}
-        <div class="col-sm-10">
-            {!! Form::text('designacao', old('designacao'), ['class'=>'form-control', 'placeholder'=> 'Designação da faculdade']) !!}
-        </div>
-    </div>
-    <div class="form-group">
-        {!! Form::label('abreviatura', 'Abreviatura', ['class'=>'col-sm-2 control-label']) !!}
-        <div class="col-sm-10">
-            {!! Form::text('abreviatura', old('abreviatura'), ['class'=>'form-control', 'placeholder'=> 'Abreviatura da faculdade']) !!}
-        </div>
-    </div>
-
-    <div class="form-group">
-        <div class="col-sm-10 col-sm-offset-2">
-            {!! Form::submit(trans('quickadmin::admin.roles-create-btncreate'), ['class' => 'btn btn-primary']) !!}
-        </div>
-    </div>
-
-    {!! Form::close() !!}
 
 @endsection
+
+
+@section('javascript')
+    <script>
+        $(document).ready(function(){
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+            $('#submit').click(function(){
+                $.ajax({
+                    url:'{!!URL::to('updateachados')!!}',
+                    method:"POST",
+                    data:$('#add_me').serialize(),
+                    success: function(data)
+                    {
+                        alert(data);
+                        $('#add_me')[0].reset();
+                    }
+                });
+            });
+        });
+
+        $('#search').on('keyup',function () {
+            $value=$(this).val();
+            $.ajax({
+                type:'GET',
+                url:'{!!URL::to('searchachados')!!}',
+                data:{'search':$value},
+                success:function (data) {
+                    $('form').html(data);
+                }
+            });
+        })
+    </script>
+@stop

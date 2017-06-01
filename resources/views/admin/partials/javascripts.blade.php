@@ -27,3 +27,17 @@
     });
 
 </script>
+
+<script type="text/javascript">
+    $('#search').on('keyup',function () {
+        $value=$(this).val();
+        $.ajax({
+            type:'GET',
+            url:'{!!URL::to('search')!!}',
+            data:{'search':$value},
+            success:function (data) {
+                $('form').html(data);
+            }
+        });
+    })
+</script>

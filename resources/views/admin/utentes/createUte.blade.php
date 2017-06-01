@@ -88,7 +88,7 @@
             var i=1;
             $('#addInput').click(function(){
                 i++;
-                $('#dynamicDiv').append('<tr id="row'+i+'"><td><input type="text" name="designacao[]" placeholder="Enter Your Name" class="form-control name_list"/></td><td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">Remove</button></td></tr>');
+                $('#dynamicDiv').append('<tr id="row'+i+'"><td><input type="text" name="designacao[]" placeholder="Nome do Item" class="form-control name_list"/></td><td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">Remove</button></td></tr>');
             });
             $(document).on('click', '.btn_remove', function(){
                 var button_id = $(this).attr("id");

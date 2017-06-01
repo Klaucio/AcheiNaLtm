@@ -1,52 +1,44 @@
+@extends('admin.layouts.master')
 
-
-    @extends('admin.layouts.master')
-
-    @section('content')
-        <div class="container background-grey bottom-border">
-            <div class="row padding-vert-60">
-                <div class="p-y-3 section">
-                    <div class="container">
-                        <div class="row">
-
-                            <main class="col-md-6">
-                                <div class="card m-y-1">
-                                    <div class="bg-info card-block text-center text-xs-center">
-                                        <h2 class=" achei list-group-item ">Artigos Achados
-                                            <span class="label label-default label-pill pull-right">{{count($achados)}}</span>
-                                        </h2>
-                                    </div>
-                                    <ul class="list-group list-group-flush">
-                                        @foreach($achados as $key => $value)
-
-                                            <a href="{{url('levantamentos',$value->id)}}" class="list-group-item achei contentor">
-                                                <h2><strong>{{ $value->designacao }}
-                                                        <span class="label label-default label-pill pull-right">
-                                                <img src="{{asset('img/'.$value->foto)}}" class="img-circle pull-right" style="width:50px">
-                                                </span></strong></h2>
-                                                <p>
-                                                <h5><strong>Local Achado</strong></h5>
-                                                {{ $value->local }}
-                                                </p>
-                                                <div class="button-wrapper">
-                                                    <div class="layer"></div>
-                                                    <button class="main-button fa fa-info">
-                                                        <div class="ripple"></div>
-                                                    </button>
-                                                </div>
-
-                                            </a>
-                                        @endforeach
-
-                                    </ul>
-                                </div>
-                            </main>
-                        </div>
-                    </div>
-                </div>
-            </div>
+@section('content')
+    @if ($message = Session::get('success'))
+        <div class="alert alert-success alert-block">
+            <button type="button" class="close" data-dismiss="alert">x</button>
+            <strong>{{ $message }}</strong>
         </div>
-    {{--</div>--}}
-    @endsection
+    @endif
+    <p>{!! link_to_route('levantamentos.create', trans('Novo'), [], ['class' => 'btn btn-success']) !!}</p>
 
+    {{--@if($utentes->count() > 0)--}}
+    <div class="portlet box green">
+        <div class="portlet-title">
+            <div class="caption">{{ trans('quickadmin::admin.roles-index-roles_list') }}</div>
+        </div>
+        <div class="portlet-body">
+            <table id="datatable" class="table table-striped table-hover table-responsive datatable">
+                <thead>
+                <tr>
+                    <th>{{ trans('quickadmin::admin.roles-index-title') }}</th>
+                    <th>&nbsp;</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                {{--@foreach ($utentes as $utente)--}}
+                <tr>
+                    <td></td>
+                    <td>
+                    </td>
+                </tr>
+                {{--@endforeach--}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    {{--@else--}}
+    {{--{{ trans('quickadmin::admin.roles-index-no_entries_found') }}--}}
+    {{--@endif--}}
+
+@endsection
 
