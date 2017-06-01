@@ -1,46 +1,193 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('admin.layouts.client_master')
+@section('title', 'Página Inicial')
+@section('banner')
+    @parent
+    <!--Carousel Wrapper-->
+    <div id="carousel-example-3" class="carousel slide carousel-fade white-text" data-ride="carousel" data-interval="false">
+        <!--Indicators-->
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-example-3" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-3" data-slide-to="1"></li>
+            <li data-target="#carousel-example-3" data-slide-to="2"></li>
+        </ol>
+        <!--/.Indicators-->
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Material Design Bootstrap</title>
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
-    <!-- Bootstrap core CSS -->
-    <link href="{{ url('css')}}/bootstrap.min.css" rel="stylesheet">
-    <!--<link rel="stylesheet"-->
-          <!--href="{{ url('quickadmin/css') }}/bootstrap.min.css"/>-->
-    <!-- Material Design Bootstrap -->
-    <link href="{{ url('css')}}/mdb.min.css" rel="stylesheet">
-    <!-- Your custom styles (optional) -->
-    <link href="{{ url('css')}}/style.css" rel="stylesheet">
-</head>
+        <!--Slides-->
+        <div class="carousel-inner" role="listbox">
 
-<body>
+            <!-- First slide -->
+            <div class="carousel-item active view hm-black-light" style="background-image: url('http://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(11).jpg'); background-repeat: no-repeat; background-size: cover;">
 
-    <!-- Start your project here-->
-    <div style="height: 100vh">
-        <div class="flex-center flex-column">
-            <h1 class="animated fadeIn mb-2">Material Design for Bootstrap</h1>
+                <!-- Caption -->
+                <div class="full-bg-img flex-center white-text">
+                    <ul class="animated fadeIn col-md-12">
+                        <li>
+                            <h1 class="h1-responsive">20 Photos to inspire you to visit Tatra Mountains</h1></li>
+                        <li>
+                            <p>Best places you should see, traditional dishes that you have to try</p>
+                        </li>
+                        <li>
+                            <a target="_blank" href="http://mdbootstrap.com/getting-started/" class="btn btn-info btn-lg" rel="nofollow">See more!</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.Caption -->
 
-            <h5 class="animated fadeIn mb-1">Thank you for using our product. We're glad you're with us.</h5>
+            </div>
+            <!--/.First slide-->
 
-            <p class="animated fadeIn text-muted">MDB Team</p>
+            <!-- Second slide -->
+            <div class="carousel-item view hm-black-light" style="background-image: url('http://mdbootstrap.com/img/Photos/Slides/img%20(67).jpg'); background-repeat: no-repeat; background-size: cover;">
+
+                <!-- Caption -->
+                <div class="full-bg-img flex-center white-text">
+                    <ul class="animated fadeIn col-md-12">
+                        <li>
+                            <h1 class="h1-responsive">10 Reasons you should spend winter holiday in mountains </h1>
+                        </li>
+                        <li>
+                            <p>Best atractions and winter sports!</p>
+                        </li>
+                        <li>
+                            <a target="_blank" href="http://mdbootstrap.com/bootstrap-tutorial/" class="btn btn-info btn-lg" rel="nofollow">Read more</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.Caption -->
+
+            </div>
+            <!--/.Second slide -->
+
+            <!-- Third slide -->
+            <div class="carousel-item view hm-black-light" style="background-image: url('http://mdbootstrap.com/img/Photos/Slides/img%20(97).jpg'); background-repeat: no-repeat; background-size: cover;">
+
+                <!-- Caption -->
+                <div class="full-bg-img flex-center white-text">
+                    <ul class="animated fadeIn col-md-12">
+                        <li>
+                            <h1 class="h1-responsive">Weekend in the nature - the best way to relax</h1></li>
+                        <li>
+                            <p>8 Reasons why you need to spend more time in nature</p>
+                        </li>
+                        <li>
+                            <a target="_blank" href="http://mdbootstrap.com/forums/forum/support/" class="btn btn-default btn-lg" rel="nofollow">Read more</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.Caption -->
+
+            </div>
+            <!--/.Third slide-->
+        </div>
+        <!--/.Slides-->
+        <!--Controls-->
+        <a class="carousel-control-prev" href="#carousel-example-3" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carousel-example-3" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+        <!--/.Controls-->
+    </div>
+    <!--/.Carousel Wrapper-->
+
+    <br>
+@endsection
+{{--fim do banner/slide--}}
+@section('content'){{--Conteúdo da Página--}}
+    <div class="container">
+        <div class="row">
+            <!--First columnn-->
+            <div class="col-lg-4 justify-content-center">
+                <!--Card-->
+                <div class="card wow fadeIn" data-wow-delay="0.2s">
+
+                    <!--Card image-->
+                    <div class="view overlay hm-white-slight justify-content-center">
+                        <img src="{{ asset('/img/report_lost_med.png') }}"  class="img-fluid" alt="">
+                        <a href="#">
+                            <div class="mask"></div>
+                        </a>
+                    </div>
+                    <!--/.Card image-->
+
+                    <!--Card content-->
+                    <div class="card-block">
+                        <!--Title-->
+                        <h4 class="card-title">Mesmerizing Landscapes</h4>
+                        <!--Text-->
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-info">Read more</a>
+                    </div>
+                    <!--/.Card content-->
+
+                </div>
+                <!--/.Card-->
+            </div>
+            <!--First columnn-->
+
+            <!--Second columnn-->
+            <div class="col-lg-4">
+                <!--Card-->
+                <div class="card wow fadeIn" data-wow-delay="0.4s">
+
+                    <!--Card image-->
+                    <div class="view overlay hm-white-slight">
+                        <img src="{{ asset('/img/report_found_med.png') }}"  class="img-fluid" alt="">
+                        {{--<img src="{{ asset('/img/download.jpg') }}"  class="img-responsive img-thumbnail">--}}
+                        <a href="#">
+                            <div class="mask"></div>
+                        </a>
+                    </div>
+                    <!--/.Card image-->
+
+                    <!--Card content-->
+                    <div class="card-block">
+                        <!--Title-->
+                        <h4 class="card-title">Trevelers Toolbox</h4>
+                        <!--Text-->
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-info">Read more</a>
+                    </div>
+                    <!--/.Card content-->
+
+                </div>
+                <!--/.Card-->
+            </div>
+            <!--Second columnn-->
+
+            <!--Third columnn-->
+            <div class="col-lg-4">
+                <!--Card-->
+                <div class="card wow fadeIn" data-wow-delay="0.6s">
+
+                    <!--Card image-->
+                    <div class="view overlay hm-white-slight">
+                        <img src="{{ asset('/img/report_lost_med.png') }}"  class="img-fluid" alt="">
+                        <a href="#">
+                            <div class="mask"></div>
+                        </a>
+                    </div>
+                    <!--/.Card image-->
+
+                    <!--Card content-->
+                    <div class="card-block">
+                        <!--Title-->
+                        <h4 class="card-title">Mountain Rivers</h4>
+                        <!--Text-->
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-info">Read more</a>
+                    </div>
+                    <!--/.Card content-->
+
+                </div>
+                <!--/.Card-->
+            </div>
+            <!--Third columnn-->
         </div>
     </div>
-    <!-- /Start your project here-->
-
-    <!-- SCRIPTS -->
-    <!-- JQuery -->
-    <script type="text/javascript" src="{{ url('js')}}/jquery-3.1.1.min.js"></script>
-    <!-- Bootstrap tooltips -->
-    <script type="text/javascript" src="{{ url('js')}}/tether.min.js"></script>
-    <!-- Bootstrap core JavaScript -->
-    <script type="text/javascript" src="{{ url('js')}}/bootstrap.min.js"></script>
-    <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="{{ url('js')}}/mdb.min.js"></script>
-</body>
-
-</html>
+    <!--/.Content-->
+    @include('auth.user_register_modal')
+@endsection

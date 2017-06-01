@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <title>{{--@yield('title')--}}AcheiNaLTM</title>
+    <title>AcheiNaLTM @yield('title')</title>
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
@@ -125,24 +125,3 @@
         </div>
     </nav>
     <!--/.Navbar-->
-  </header>
-  <div class="container">
-      @yield('content')
-  </div>
-    <!-- SCRIPTS -->
-    <!-- JQuery -->
-    <script type="text/javascript" src="{{ url('js')}}/jquery-2.2.3.min.js"></script>
-    <script type="text/javascript" src="{{ url('js')}}/jquery-3.1.1.min.js"></script>
-    <!-- Bootstrap tooltips -->
-    <script type="text/javascript" src="{{ url('js')}}/tether.min.js"></script>
-    <!-- Bootstrap core JavaScript -->
-    <script type="text/javascript" src="{{ url('js')}}/bootstrap.min.js"></script>
-    <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="{{ url('js')}}/mdb.min.js"></script>
-
-
-    <script>
-        new WOW().init();
-    </script>
-</body>
-</html>
