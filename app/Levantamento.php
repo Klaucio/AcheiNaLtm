@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Levantamento extends Model
 {
     //
-//    protected $fillable = ['name', 'email', 'password', 'role_id'];
+    protected $fillable = ['user_id', 'utente_id', 'bagagem_id'];
 
     public function users()
     {
