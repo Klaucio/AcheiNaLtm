@@ -11,9 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('/home/index');
-});
+Route::get('/', 'HomeController@index');
+//Route::get('/', function () {
+//    return view('/home/index');
+//});
+
+Route::resource('items', 'ItemController');
 Route::resource('utentes', 'UtenteController');
 Route::resource('achados', 'AchadosController');
 Route::resource('levantamentos', 'LevantamentoController');
