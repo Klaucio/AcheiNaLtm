@@ -114,7 +114,7 @@
                 @if (Route::has('login'))
                     <div class="top-right links ">
                         @if (Auth::check())
-                            <a href="{{ url('/home') }}">Home</a>
+                            <a href="{{ url('/logout') }}">Logout <i class="fa fa-sign-out fa-fw"></i></a>
                         @else
                             <a href="{{ url('/login') }}">Login</a>
                             <a data-toggle="modal" data-target="#centralModalSuccess" href="#">Register</a>
