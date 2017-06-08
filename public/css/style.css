@@ -11,6 +11,10 @@
     clear: both;
 }
 
+.col-lg-4{
+    margin-bottom: 5px !important;
+}
+
 .card > .card-block > .info >footer> ul,
 .card > .card-block > .social > ul {
     display: table;
@@ -141,7 +145,7 @@
 @import url("//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css");
 body {
     padding: 50px 0px;
-    background-color: rgb(220, 220, 220);
+    /*background-color: rgb(220, 220, 220);*/
 }
 
 .event-list {

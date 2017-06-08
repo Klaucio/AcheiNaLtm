@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\View\View;
 
 class ItemController extends Controller
 {
@@ -14,6 +16,13 @@ class ItemController extends Controller
     public function index()
     {
         //
+        $devlist = DB::table('encomendas')
+            ->select(DB::raw('MONTHNAME(updated_at) as month'), DB::raw("DATE_FORMAT(updated_at,'%Y-%m') as monthNum"), DB::raw('count(*) as encomendas'))
+            ->groupBy('monthNum')
+            ->get();
+
+        return view('admin.items.estatisticas')
+            ->with('devlist',$devlist);
     }
 
     /**
@@ -80,5 +89,15 @@ class ItemController extends Controller
     public function destroy($id)
     {
         //
+    }
+    public function getChart(){
+        $devlist = DB::table('items')
+            ->select(DB::raw('MONTHNAME(updated_at) as month'), DB::raw("DATE_FORMAT(updated_at,'%Y-%m') as monthNum"), DB::raw('count(*) as items'))
+            ->groupBy('monthNum')
+            ->get();
+
+        return view('chartjs')
+            ->with('viewer',$devlist);
+//        return $devlist;
     }
 }

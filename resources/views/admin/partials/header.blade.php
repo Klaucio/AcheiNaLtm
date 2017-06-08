@@ -120,6 +120,8 @@
     <script type="text/javascript" src="{{ url('js')}}/bootstrap.min.js"></script>
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="{{ url('js')}}/mdb.min.js"></script>
+    <!-- Chart.js para dados estatísticos -->
+    <script type="text/javascript" src="{{ url('js')}}/Chart.min.js"></script>
 
 
     <script>

@@ -36,9 +36,9 @@
                     </a>
                 </li>
                 <li @if(Request::path() == 'perdidos') class="active" @endif>
-                    <a href="{{ url('perdidos') }}">
+                    <a href="{{ url('items') }}">
                         <i class="fa fa-gavel"></i>
-                        <span class="title">Perdidos</span>
+                        <span class="title">Estatist'ica</span>
                     </a>
 
                     {{--<ul class="sub-menu">--}}
