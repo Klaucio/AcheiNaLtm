@@ -86,6 +86,11 @@
         .carousel {
             height: 50%;
         }
+        .table td {
+             border-top: none !important;
+             border-left: none !important;
+             size: 30px;
+         }
 
         @media (max-width: 776px) {
             .carousel {

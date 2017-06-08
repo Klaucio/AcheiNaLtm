@@ -36,7 +36,7 @@
             url:'{!!URL::to('search')!!}',
             data:{'search':$value},
             success:function (data) {
-                $('form').html(data);
+                $('tbody').html(data);
             }
         });
     })

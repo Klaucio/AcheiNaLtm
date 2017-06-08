@@ -25,6 +25,15 @@
                 <div class="col-md-12">
                        <span class="item" margin-right="20">
                            <form name="add_me" id="add_me">
+                                <table class="table table-bordered table-hover table-striped tabela" style="table-layout: fixed" id="tabela">
+                        {{--<thead>--}}
+                                    {{----}}
+                                    {{--</thead>--}}
+                                    <tbody>
+
+                        </tbody>
+                    </table>
+
 
                            </form>
 
@@ -76,7 +85,7 @@
                 url:'{!!URL::to('searchlevant')!!}',
                 data:{'search':$value},
                 success:function (data) {
-                    $('form').html(data);
+                    $('tbody').html(data);
                 }
             });
         })
