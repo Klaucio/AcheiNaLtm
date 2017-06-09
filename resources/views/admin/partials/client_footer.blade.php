@@ -25,7 +25,7 @@
 
             <!--First column-->
             <div class="col-lg-3 offset-lg-1 hidden-lg-down">
-                <h5 class="title">SOBRE LINHAS TERRESTRES DE MOÇAMBIQUE</h5>
+                <h6 class="title">SOBRE LINHAS TERRESTRES DE MOÇAMBIQUE</h6>
                 <p>Material Design (codenamed Quantum Paper) is a design language developed by Google. </p>
 
                 <p>Material Design for Bootstrap (MDB) is a powerful Material Design UI KIT for most popular HTML, CSS, and JS framework - Bootstrap.</p>
@@ -36,7 +36,7 @@
 
             <!--Second column-->
             <div class="col-lg-2 col-md-4 offset-lg-1">
-                <h5 class="title">Recent Trips</h5>
+                <h6 class="title">Nossas Rotas</h6>
                 <ul>
                     <li><a href="#!">Balkans</a></li>
                     <li><a href="#!">Tatra Mountains</a></li>
@@ -50,7 +50,7 @@
 
             <!--Third column-->
             <div class="col-lg-2 col-md-4">
-                <h5 class="title">My guest articles</h5>
+                <h5 class="title">Disponibilidade</h5>
                 <ul>
                     <li><a href="#!">"Things I learn on the road"</a></li>
                     <li><a href="#!">"Low-budget traveling made simple"</a></li>
@@ -64,7 +64,7 @@
 
             <!--Fourth column-->
             <div class="col-lg-2 col-md-4">
-                <h5 class="title">Follow me on</h5>
+                <h5 class="title">Siga-nos</h5>
                 <ul>
                     <li><a href="#!">Facebook</a></li>
                     <li><a href="#!">Instagram</a></li>
@@ -82,7 +82,7 @@
 
     <!--Call to action-->
     <div class="call-to-action">
-        <h4>Material Design for Bootstrap</h4>
+        <h4>LINHAS TERRESTRES DE MOÇAMBIQUE</h4>
         <ul>
             <li>
                 <h5>Get our UI KIT for free</h5></li>
@@ -95,7 +95,7 @@
     <!--Copyright-->
     <div class="footer-copyright">
         <div class="container-fluid">
-            © 2015 Copyright: <a href="http://www.MDBootstrap.com"> MDBootstrap.com </a>
+            © 2015 Copyright: <a href="http://www.MDBootstrap.com"> macuacua's devopment team </a>
 
         </div>
     </div>

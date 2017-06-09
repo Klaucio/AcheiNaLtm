@@ -18,8 +18,16 @@ class HomeController extends Controller
         //
 //        $achados=DB::table('artigos')->where('tipo','=','Achado')->get();
 //        $perdidos=DB::table('artigos')->where('tipo','=','Perdido')->get();
+//        $encomendas=null;
 
+<<<<<<< HEAD
         $items=DB::table('items')->where('estado','=','Achado')->orderBy('id','desc')->paginate(6);
+=======
+        $items=DB::table('items')->where('estado','=','Perdido')->get();
+//        $dados=Item::with('encomendas');
+//        if($items->encomendas->id)
+//            $encomendas=DB
+>>>>>>> b5f13840ccd9e53ccc0d27016d1fdc427103d280
 
 
         return view('home.index')->with(array('items' =>$items));

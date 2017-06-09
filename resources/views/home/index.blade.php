@@ -161,5 +161,10 @@
 {{--</div>--}}
 
     @include('auth.user_register_modal')
+<<<<<<< HEAD
 
 @endsection
+=======
+    @include('auth.login_modal')
+@endsection
+>>>>>>> b5f13840ccd9e53ccc0d27016d1fdc427103d280

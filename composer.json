@@ -6,7 +6,11 @@
     "type": "project",
     "require": {
         "php": ">=5.6.4",
+<<<<<<< HEAD
         "barryvdh/laravel-dompdf": "^0.7.0",
+=======
+        "fx3costa/laravelchartjs": "^2.2",
+>>>>>>> b5f13840ccd9e53ccc0d27016d1fdc427103d280
         "laravel/framework": "5.4.*",
         "laravel/tinker": "~1.0",
         "laraveldaily/quickadmin": "^2.1"
