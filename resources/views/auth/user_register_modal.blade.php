@@ -1,16 +1,16 @@
 <!-- Button trigger modal -->
 <!-- Central Modal Medium Success -->
-<div class="modal fade" id="centralModalSuccess" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-notify " role="document">
+<div class="modal fade" id="modalRegister" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog cascading-modal" role="document">
         <!--Content-->
         <div class="modal-content">
-            <!--Header-->
-            <div class="modal-header form-header mdb-gradient">
-                <h3><i class="fa fa-user"></i> Registe-Se</h3>
 
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true" class="white-text">&times;</span>
+            <!--Header-->
+            <div class="modal-header light-blue darken-3 white-text">
+                <button type="button" class="close waves-effect waves-light" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
                 </button>
+                <h4 class="title"><i class="fa fa-user-plus"></i> Register</h4>
             </div>
 
             <!--Body-->
@@ -69,8 +69,9 @@
             </div>
 
             <!--Footer-->
-            <div class="modal-footer mdb-gradient justify-content-center">
-                <button type="submit" class="btn btn-default waves-effect">REGISTAR</button>
+
+            <div class="modal-footer justify-content-center">
+                <button type="submit" class="btn btn-info waves-effect">REGISTAR</button>
 
             </div>
         </div>

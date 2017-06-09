@@ -154,4 +154,5 @@
     </div>
     <!--/.Content-->
     @include('auth.user_register_modal')
+    @include('auth.login_modal')
 @endsection

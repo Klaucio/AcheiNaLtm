@@ -116,8 +116,9 @@
                         @if (Auth::check())
                             <a href="{{ url('/logout') }}">Logout <i class="fa fa-sign-out fa-fw"></i></a>
                         @else
-                            <a href="{{ url('/login') }}">Login</a>
-                            <a data-toggle="modal" data-target="#centralModalSuccess" href="#">Register</a>
+                            <a data-toggle="modal" data-target="#modalLogin" href="#">Login</a>
+                            {{--{{ url('/login') }}--}}
+                            <a data-toggle="modal" data-target="#modalRegister" href="#">Register</a>
                         @endif
                     </div>
                 @endif

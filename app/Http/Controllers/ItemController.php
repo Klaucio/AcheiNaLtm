@@ -22,7 +22,8 @@ class ItemController extends Controller
             ->get();
 
         return view('admin.items.estatisticas')
-            ->with('devlist',$devlist);
+            ->with('devlist',$devlist );
+
     }
 
     /**
