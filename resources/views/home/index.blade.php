@@ -153,5 +153,13 @@
         </div>
     </div>
     <!--/.Content-->
+{{--<div class="row" position="center">--}}
+    {{--<center>--}}
+        {{--{{$items->render()}}--}}
+    {{--</center>--}}
+
+{{--</div>--}}
+
     @include('auth.user_register_modal')
+
 @endsection

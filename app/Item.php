@@ -14,5 +14,9 @@ class Item extends Model
     {
         return $this->belongsTo(Bagagem::class);
     }
+    public function encomenda()
+    {
+        return $this->belongsTo(Encomenda::class);
+    }
 
 }

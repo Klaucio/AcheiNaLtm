@@ -71,7 +71,7 @@
                     data:$('#add_me').serialize(),
                     success: function(data)
                     {
-                        alert(data);
+                        alert('Salvo com Sucesso!');
                         $('#add_me')[0].reset();
                     }
                 });

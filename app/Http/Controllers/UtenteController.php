@@ -15,7 +15,7 @@ class UtenteController extends Controller
 
     public function index()
     {
-        $utentes=Utente::all();
+        $utentes=Utente::orderBy('created_at','desc')->paginate(3);
       return view('admin.utentes.index',compact('utentes'));
     }
 

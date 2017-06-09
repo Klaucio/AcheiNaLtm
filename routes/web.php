@@ -19,6 +19,7 @@ Route::get('/', 'HomeController@index');
 Route::resource('items', 'ItemController');
 Route::resource('utentes', 'UtenteController');
 Route::resource('achados', 'AchadosController');
+Route::resource('encomendas', 'EncomendaController');
 Route::resource('levantamentos', 'LevantamentoController');
 Route::get('searchachados','AchadosController@edit');
 Route::post('updateachados','AchadosController@update');

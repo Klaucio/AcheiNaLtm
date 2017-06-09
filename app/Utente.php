@@ -13,6 +13,9 @@ class Utente extends Model
     public function user(){
         return $this->hasOne(User::class);
     }
+    public function encomendas(){
+        return $this->hasMany(Encomenda::class);
+    }
     public function rotaUtente()
     {
         return $this->belongsToMany(RotaUtente::class)

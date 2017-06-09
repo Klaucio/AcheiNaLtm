@@ -1,4 +1,21 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
 
+        </div>
+        <div class="col-md-4">
+            <center>
+                {{$items->render()}}
+            </center>
+
+        </div>
+        <div class="col-md-4">
+
+        </div>
+
+    </div>
+
+</div>
 <!--Footer-->
 <footer class="page-footer center-on-small-only">
 

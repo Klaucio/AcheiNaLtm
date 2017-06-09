@@ -56,34 +56,18 @@ class LevantamentoController extends Controller
                         '</tr>'.
                         '<td><input type="hidden" class="form-control" data-bs-table-unique-id="2" id="utente_id" name="utente_id" value="'.$item->utente_id.'"></td>'.
                         '<td><input type="hidden" class="form-control" data-bs-table-unique-id="2" id="bagagem_id" name="bagagem_id" value="'.$item->bagagem_id.'"></td>';
-//
+
                 }
                 return Response($output);
             }
         }
-//        if ($request->ajax()){
-//            $output="";
-//            $items = DB::table('items')
-//                ->where('bagagem_id','=',$request->search)
-//                ->where('estado','=','Achado')
-//                ->get();
-//            if ($items){
-//                foreach ($items as $item){
-//                    $output.='<p>'.
-//                        '<input type="checkbox" name="id[]" value="'.$item->id.'" id="indeterminate-checkbox"/>'.
-//                        '<label for="indeterminate-checkbox">'.$item->designacao.'</label>'.
-//                        '</p>';
-//                }
-//                return Response($output);
-//            }
-//        }
+
     }
 
 
     public function update(Request $request)
     {
         $request->request->add(['user_id'=>Auth::id()]);
-//        dd($request->all());
         $levantamento=Levantamento::create($request->all());
         $levantamento->save();
         $ids=$request->id;
