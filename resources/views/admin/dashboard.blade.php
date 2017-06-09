@@ -2,7 +2,7 @@
 
 @section('content')
 
-    {{ trans('quickadmin::admin.dashboard-title') }}
+    {{--{{ trans('quickadmin::admin.dashboard-title') }}--}}
 
     <div class="container">
         <div class="row">
@@ -37,6 +37,11 @@
                 </div>
             @endforeach
         </div>
-    </div>
+    </div>`
+    <div class="row">
+        <center>
+            {{$items->render()}}
+        </center>
 
+    </div>
 @endsection

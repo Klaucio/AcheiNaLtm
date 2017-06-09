@@ -4,10 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Encomenda;
 use App\Item;
+use App\Utente;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
-class HomeController extends Controller
+class EncomendaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,23 +16,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        //
-//        $achados=DB::table('artigos')->where('tipo','=','Achado')->get();
-//        $perdidos=DB::table('artigos')->where('tipo','=','Perdido')->get();
-//        $encomendas=null;
-
-
-        $items=DB::table('items')->where('estado','=','Perdido')->orderBy('id','desc')->paginate(6);
-
-//        $items=DB::table('items')->where('estado','=','Achado')->orderBy('id','desc')->paginate(6);
-//        $items=DB::table('items')->where('estado','=','Perdido')->get();
-//        $dados=Item::with('encomendas');
-//        $items=Encomenda::with('items');
-
-
-
-        return view('home.index')->with(array('items' =>$items));
-//        return view('home')->with(array('achados' =>$achados, 'perdidos' => $perdidos));
+        $encomendas=Encomenda::all();
+        return view('admin.encomendas.index',compact('encomendas'));
     }
 
     /**
@@ -42,7 +27,7 @@ class HomeController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.encomendas.create');
     }
 
     /**
@@ -53,7 +38,28 @@ class HomeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $utente=Utente::create($request->all());
+        $request->request->add(['utente_id'=>$utente->id]);
+
+        //encomenda save
+        $encomenda=Encomenda::create($request->all());
+        $utente->encomendas()->save($encomenda);
+//        $bilhete->save();
+
+        //bagagem save
+//        $bagagem=Bagagem::create(['id'=>$bilhete->id,'rota_utente_id'=>$bilhete->id]);
+//        $bagagem->save();
+
+        //item save
+        $designacao=$request->designacao;
+        foreach($designacao as $index=>$value) {
+            $item = new Item();
+            $item->designacao = $designacao[$index];
+            $item->encomenda_id=$encomenda->id;
+            $item->save();
+        }
+        return redirect()->route('utentes.index')
+            ->with('success',' Registado com Sucesso.');
     }
 
     /**

@@ -1,4 +1,21 @@
+{{--<div class="container">--}}
+    {{--<div class="row">--}}
+        {{--<div class="col-md-4">--}}
 
+        {{--</div>--}}
+        {{--<div class="col-md-4">--}}
+            {{--<center>--}}
+                {{--{{$items->render()}}--}}
+            {{--</center>--}}
+
+        {{--</div>--}}
+        {{--<div class="col-md-4">--}}
+
+        {{--</div>--}}
+
+    {{--</div>--}}
+
+{{--</div>--}}
 <!--Footer-->
 <footer class="page-footer center-on-small-only">
 
@@ -9,9 +26,9 @@
             <!--First column-->
             <div class="col-lg-3 offset-lg-1 hidden-lg-down">
                 <h6 class="title">SOBRE LINHAS TERRESTRES DE MOÇAMBIQUE</h6>
-                <p>Material Design (codenamed Quantum Paper) is a design language developed by Google. </p>
+                <p>Provemos melhores serviços de transporte para sí e sua família </p>
 
-                <p>Material Design for Bootstrap (MDB) is a powerful Material Design UI KIT for most popular HTML, CSS, and JS framework - Bootstrap.</p>
+                <p>Quer viajar? Temos os melhores serviços para sí</p>
             </div>
             <!--/.First column-->
 
@@ -21,10 +38,10 @@
             <div class="col-lg-2 col-md-4 offset-lg-1">
                 <h6 class="title">Nossas Rotas</h6>
                 <ul>
-                    <li><a href="#!">Balkans</a></li>
-                    <li><a href="#!">Tatra Mountains</a></li>
-                    <li><a href="#!">Norway Fjords</a></li>
-                    <li><a href="#!">Baikal Lake</a></li>
+                    <li><a href="#!">Maputo-Beira</a></li>
+                    <li><a href="#!">Maputo-Tete</a></li>
+                    <li><a href="#!">Maputo-Chimoio</a></li>
+                    {{--<li><a href="#!">Baikal Lake</a></li>--}}
                 </ul>
             </div>
             <!--/.Second column-->
@@ -49,7 +66,7 @@
             <div class="col-lg-2 col-md-4">
                 <h5 class="title">Siga-nos</h5>
                 <ul>
-                    <li><a href="#!">Facebook</a></li>
+                    <li><a href="facebook.com!">Facebook</a></li>
                     <li><a href="#!">Instagram</a></li>
                     <li><a href="#!">Twitter</a></li>
                     <li><a href="#!">Pinterest</a></li>

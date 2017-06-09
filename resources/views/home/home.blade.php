@@ -188,5 +188,7 @@
     </div>
 </div>
 <!--/.Content-->
+
 @include('auth.user_register_modal')
+
 @endsection

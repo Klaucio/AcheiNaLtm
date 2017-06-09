@@ -5,6 +5,12 @@
             data-auto-scroll="true"
             data-slide-speed="200">
             @if(Auth::user()->role_id == config('quickadmin.defaultRole'))
+                <li @if(Request::path() == 'home') class="active" @endif>
+                    <a href="{{ url('admin') }}">
+                        <i class="fa fa-home"></i>
+                        <span class="title">Home</span>
+                    </a>
+                </li>
                 <li @if(Request::path() == config('quickadmin.route').'/menu') class="active" @endif>
                     <a href="{{ url(config('quickadmin.route').'/menu') }}">
                         <i class="fa fa-list"></i>
@@ -29,6 +35,12 @@
                         <span class="title">Utentes</span>
                     </a>
                 </li>
+                <li @if(Request::path() == 'encomendas') class="active" @endif>
+                    <a href="{{ url('encomendas') }}">
+                        <i class="fa fa-gavel"></i>
+                        <span class="title">Encomendas</span>
+                    </a>
+                </li>
                 <li @if(Request::path() == 'achados') class="active" @endif>
                     <a href="{{ url('achados') }}">
                         <i class="fa fa-gavel"></i>
@@ -40,18 +52,6 @@
                         <i class="fa fa-gavel"></i>
                         <span class="title">Estatist'ica</span>
                     </a>
-
-                    {{--<ul class="sub-menu">--}}
-
-                            {{--<li class="active active-sub">--}}
-                                {{--<a href="{{url('perdidos') }}">--}}
-                                    {{--<i class="fa fa-briefcase"></i>--}}
-                                    {{--<span class="title">--}}
-                               {{--Registar Achados--}}
-                            {{--</span>--}}
-                                {{--</a>--}}
-                            {{--</li>--}}
-                    {{--</ul>--}}
 
                 </li>
                 <li @if(Request::path() == 'levantamentos') class="active" @endif>

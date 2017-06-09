@@ -22,13 +22,13 @@
                 <div class="full-bg-img flex-center white-text">
                     <ul class="animated fadeIn col-md-12">
                         <li>
-                            <h1 class="h1-responsive">20 Photos to inspire you to visit Tatra Mountains</h1></li>
+                            <h1 class="h1-responsive">Agência de Viagens a sua altura</h1></li>
                         <li>
-                            <p>Best places you should see, traditional dishes that you have to try</p>
+                            <p>Junte-se a nós e disfrute dos melhores serviços por nós providos</p>
                         </li>
-                        <li>
-                            <a target="_blank" href="http://mdbootstrap.com/getting-started/" class="btn btn-info btn-lg" rel="nofollow">See more!</a>
-                        </li>
+                        {{--<li>--}}
+                            {{--<a target="_blank" href="http://mdbootstrap.com/getting-started/" class="btn btn-info btn-lg" rel="nofollow">See more!</a>--}}
+                        {{--</li>--}}
                     </ul>
                 </div>
                 <!-- /.Caption -->
@@ -97,17 +97,17 @@
 @endsection
 {{--fim do banner/slide--}}
 @section('content'){{--Conteúdo da Página--}}
-    <div class="container">
-        <div class="row">
-            <!--First columnn-->
-            @foreach($items as $key => $value)
+<div class="container">
+    <div class="row">
+        <!--First columnn-->
+        @foreach($items as $key => $value)
             <div class="col-lg-4 justify-content-center">
                 <!--Card-->
                 <div class="card wow fadeIn achei" data-wow-delay="0.2s">
 
                     <!--Card image-->
                     <div class="view hm-white-slight center">
-{{--                        <img src="{{ asset('/img/report_lost_1.png') }}"  class="img-fluid" alt="">--}}
+                        {{--                        <img src="{{ asset('/img/report_lost_1.png') }}"  class="img-fluid" alt="">--}}
                         <a href="#">
                             <div class="mask"></div>
                         </a>
@@ -142,17 +142,24 @@
                     </div>
                     <!--/.Card content-->
                     {{--<div class="overlay">--}}
-                        {{--<div class="text">Hello World</div>--}}
+                    {{--<div class="text">Hello World</div>--}}
                     {{--</div>--}}
 
                 </div>
                 <!--/.Card-->
             </div>
-            @endforeach
-            <!--First columnn-->
-        </div>
+    @endforeach
+    <!--First columnn-->
     </div>
-    <!--/.Content-->
+</div>
+<!--/.Content-->
+{{--<div class="row" position="center">--}}
+{{--<center>--}}
+{{--{{$items->render()}}--}}
+{{--</center>--}}
+
+{{--</div>--}}
+{{--@endsection--}}
     @include('auth.user_register_modal')
     @include('auth.login_modal')
 @endsection
