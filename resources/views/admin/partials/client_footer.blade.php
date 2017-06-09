@@ -52,10 +52,10 @@
             <div class="col-lg-2 col-md-4">
                 <h5 class="title">Disponibilidade</h5>
                 <ul>
-                    <li><a href="#!">"Things I learn on the road"</a></li>
-                    <li><a href="#!">"Low-budget traveling made simple"</a></li>
-                    <li><a href="#!">"Talking with locals"</a></li>
-                    <li><a href="#!">"Leaving things behind"</a></li>
+                    <li><a href="#!">Disponíveis de segunda à Sábado</a></li>
+                    <li><a href="#!">Segunda-Sexta: 8-17h</a></li>
+                    <li><a href="#!">Sábado:8-14h</a></li>
+                    <li><a href="#!">Maputo-Beira-Chimoio-Tete</a></li>
                 </ul>
             </div>
             <!--/.Third column-->

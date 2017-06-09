@@ -96,17 +96,17 @@
             <div class="collapse navbar-collapse" id="navbarNav1">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link">Página Inicial <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link">News</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link">Videos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link">About</a>
-                    </li>
+                    {{--<li class="nav-item">--}}
+                        {{--<a class="nav-link">News</a>--}}
+                    {{--</li>--}}
+                    {{--<li class="nav-item">--}}
+                        {{--<a class="nav-link">Videos</a>--}}
+                    {{--</li>--}}
+                    {{--<li class="nav-item">--}}
+                        {{--<a class="nav-link">About</a>--}}
+                    {{--</li>--}}
                 </ul>
                 <form class="form-inline waves-effect waves-light">
                     <input class="form-control" type="text" placeholder="Search">
@@ -116,9 +116,9 @@
                         @if (Auth::check())
                             <a href="{{ url('/logout') }}">Logout <i class="fa fa-sign-out fa-fw"></i></a>
                         @else
-                            <a data-toggle="modal" data-target="#modalLogin" href="#">Login</a>
+                            <a style="color: white;" data-toggle="modal" data-target="#modalLogin" href="#"><strong>Login</strong></a>
                             {{--{{ url('/login') }}--}}
-                            <a data-toggle="modal" data-target="#modalRegister" href="#">Register</a>
+                            <a style="color: white;" data-toggle="modal" data-target="#modalRegister" href="#"><strong>Registe-se</strong></a>
                         @endif
                     </div>
                 @endif
