@@ -5,7 +5,7 @@ return [
   'dashboard-title' => 'Seja Bem vindo ao Painel de Controle do seu projeto',
 
   // partials-header
-  'partials-header-title' => 'QuickAdmin pt_BR',
+  'partials-header-title' => 'LTM ',
 
   // admin-partials-sidebar
   'partials-sidebar-menu' => 'Menu',
@@ -15,7 +15,7 @@ return [
   'partials-sidebar-logout' => 'Desconectar',
 
   // admin-partials-topbar
-  'partials-topbar-title' => 'QuickAdmin pt_BR',
+  'partials-topbar-title' => 'LTM',
 
   // users-create
   'users-create-create_user' => 'Inclusão de Usuário',
