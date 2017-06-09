@@ -20,8 +20,8 @@ class HomeController extends Controller
 //        $perdidos=DB::table('artigos')->where('tipo','=','Perdido')->get();
 //        $encomendas=null;
 
-        $items=DB::table('items')->where('estado','=','Perdido')->get();
-//        $dados=Item::with('encomendas');
+//        $items=DB::table('items')->where('estado','=','Perdido')->get();
+        $items=En::with('encomendas');
 //        if($items->encomendas->id)
 //            $encomendas=DB
 

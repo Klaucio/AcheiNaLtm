@@ -8,14 +8,20 @@ $.ajaxSetup({  headers: {
 
 $(function(){
 //            console.log(devlist);
-    $.ajax({
-        url:'items',
-        // data:'_token = <?php echo csrf_token() ?>',
-        success:function(data){
-            window.alert(data);
-        }
-    });
-           // $.getJSON('items',function (result) {
+//     $.ajax({
+//         url:'items',
+//         // data:'_token = <?php echo csrf_token() ?>',
+//         success:function(data){
+//             window.alert(data);
+//         }
+//     });
+    $.getJSON('items', { get_param: 'value' }, function(data) {
+        $.each(data, function(index, element) {
+            $('body').append($('#teste', {
+                text: element.month
+            }));
+        });
+    });           // $.getJSON('items',function (result) {
            //      sweetAlert(result);
 //                var labels = [],data=[];
 //                for (var i = 0; i < result.length; i++) {

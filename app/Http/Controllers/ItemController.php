@@ -23,6 +23,7 @@ class ItemController extends Controller
 
         return view('admin.items.estatisticas')
             ->with('devlist',$devlist );
+//        return response()->json($devlist);
 
     }
 
