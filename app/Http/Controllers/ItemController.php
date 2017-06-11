@@ -93,13 +93,21 @@ class ItemController extends Controller
         //
     }
     public function getChart(){
-        $devlist = DB::table('items')
-            ->select(DB::raw('MONTHNAME(updated_at) as month'), DB::raw("DATE_FORMAT(updated_at,'%Y-%m') as monthNum"), DB::raw('count(*) as items'))
+//        $devlist = array(1,2,3);
+        $encomendas = DB::table('encomendas')
+            ->select(DB::raw('MONTHNAME(updated_at) as month'), DB::raw("DATE_FORMAT(updated_at,'%Y-%m') as monthNum"), DB::raw('count(*) as encomendas'))
             ->groupBy('monthNum')
             ->get();
 
-        return view('chartjs')
-            ->with('viewer',$devlist);
+//        return view('chartjs')
+//            ->with('viewer',$devlist);
 //        return $devlist;
+
+//        return response()->json([
+//            'jan' => 80,
+//            'jan_confirmados' =>30
+//        ]);
+
+        return response()->json(compact('encomendas'));
     }
 }

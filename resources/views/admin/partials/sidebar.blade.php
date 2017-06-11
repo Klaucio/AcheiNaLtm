@@ -50,7 +50,7 @@
                 <li @if(Request::path() == 'perdidos') class="active" @endif>
                     <a href="{{ url('items') }}">
                         <i class="fa fa-gavel"></i>
-                        <span class="title">Estatist'ica</span>
+                        <span class="title">Estatistícas</span>
                     </a>
 
                 </li>

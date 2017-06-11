@@ -18,19 +18,29 @@
                 <table id="datatable" class="table table-striped table-hover table-responsive datatable">
                     <thead>
                         <tr>
-                            <th>{{ trans('quickadmin::admin.roles-index-title') }}</th>
-                            <th>&nbsp;</th>
+                            <th>Emissor</th>
+                            <th>Telefone Emissor</th>
+                            <th>Receptor</th>
+                            <th>Telefone Receptor</th>
+                            <th>Destino</th>
+                            <th>Data Envio</th>
+                            <th>Preço</th>
                         </tr>
                     </thead>
 
                     <tbody>
-                        @foreach ($encomendas as $$encomenda)
+{{--                    {{dd($encomendas)}}--}}
+                        @foreach ($encomendas as $encomenda)
                             <tr>
-                                <td></td>
-                                <td>
-
-
-                                </td>
+{{--                                @foreach($encomenda-nte as $utente )<td></td><td></td>--}}
+                                <td>{{$encomenda->first()->utentes->nome}}</td>
+                                <td>{{$encomenda->first()->utentes->telefone}}</td>
+{{--                                <td>{{$encomenda->updated_at}}</td>--}}
+                                <td>{{$encomenda->nome_receptor}}</td>
+                                <td>{{$encomenda->telefone_receptor}}</td>
+                                <td>{{$encomenda->destino}}</td>
+                                <td>{{$encomenda->created_at}}</td>
+                                <td>MZN {{$encomenda->preco}}</td>
                             </tr>
                         @endforeach
                     </tbody>

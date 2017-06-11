@@ -25,8 +25,8 @@ Route::get('searchachados','AchadosController@edit');
 Route::post('updateachados','AchadosController@update');
 Route::get('searchlevant','LevantamentoController@edit');
 Route::post('updatelevant','LevantamentoController@update');
-//Route::get('items/getChart', ['as' => 'graficos', function ($id) {
-//    //
-//    $faculdade = \App\Models\faculdade::findOrFail($id);
-//    return view('admin.departamentos.createWithId', compact('faculdade'));
-//}]);
+Route::get('getChart', 'ItemController@getChart')->name('getChart');
+
+Route::get('aaa', function(){
+    return view('aaa');
+});

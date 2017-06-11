@@ -13,7 +13,7 @@ class Encomenda extends Model
     }
     public function utentes()
     {
-        return $this->belongsTo(Utente::class);
+        return $this->belongsTo(Utente::class,'utente_id');
     }
 
 }

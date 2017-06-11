@@ -16,8 +16,9 @@ class EncomendaController extends Controller
      */
     public function index()
     {
-        $encomendas=Encomenda::all();
-        return view('admin.encomendas.index',compact('encomendas'));
+        $encomendas=Encomenda::with('utentes')->get();
+//        dd($encomendas->first()->utentes);
+        return view('admin.encomendas.index')->with('encomendas',$encomendas);
     }
 
     /**

@@ -5,7 +5,8 @@
 <!-- Bootstrap tooltips -->
 <script type="text/javascript" src="{{ url('js')}}/tether.min.js"></script>
 <!-- Bootstrap core JavaScript -->
-<script type="text/javascript" src="{{ url('js')}}/bootstrap.min.js"></script>
+{{--//for the theme o tema v4 alpha --}}
+<script type="text/javascript" src="{{ url('js/js')}}/bootstrap.min.js"></script>
 <!-- MDB core JavaScript -->
 <script type="text/javascript" src="{{ url('js')}}/mdb.min.js"></script>
 

@@ -29,28 +29,16 @@
                     <label for="form31">{{ trans('quickadmin::auth.login-password') }}</label>
                 </div>
 
-                <div class="text-center mt-2">
-                    <button class="btn btn-info"> {{ trans('quickadmin::auth.login-btnlogin') }}    <i class="fa fa-sign-in ml-1"></i></button>
-                </div>
+
 
             </div>
             <!--Footer-->
-            <div class="modal-footer">
-                {{--<div class="options text-center text-md-right mt-1">--}}
-                    {{--<p>Not a member? <a href="#">Sign Up</a></p>--}}
-                    {{--<p>Forgot <a href="#">Password?</a></p>--}}
+            <div class="text-center modal-footer justify-content-center ">
 
-                    {{--<div class="form-group">--}}
-                        {{--<div class="col-md-6 col-md-offset-4">--}}
-                            {{--<label>--}}
-                                {{--<input type="checkbox"--}}
-                                       {{--name="remember">{{ trans('quickadmin::auth.login-remember_me') }}--}}
-                            {{--</label>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-
-                {{--</div>--}}
-                <button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Close <i class="fa fa-times-circle ml-1"></i></button>
+                <div class="text-center mt-2">
+                    <button class="btn btn-info"> {{ trans('quickadmin::auth.login-btnlogin') }}    <i class="fa fa-sign-in ml-1"></i></button>
+                </div>
+                {{--<button type="button" class="btn btn-outline-info waves-effect ml-auto" data-dismiss="modal">Close <i class="fa fa-times-circle ml-1"></i></button>--}}
             </div>
             </form>
         </div>

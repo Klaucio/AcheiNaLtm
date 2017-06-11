@@ -66,8 +66,8 @@
             <div class="col-lg-2 col-md-4">
                 <h5 class="title">Siga-nos</h5>
                 <ul>
-                    <li><a href="facebook.com!">Facebook</a></li>
-                    <li><a href="#!">Instagram</a></li>
+                    <li><a href="https://www.facebook.com">Facebook</a></li>
+                    <li><a href="https://www.instagram.com/">Instagram</a></li>
                     <li><a href="#!">Twitter</a></li>
                     <li><a href="#!">Pinterest</a></li>
                 </ul>
@@ -85,9 +85,9 @@
         <h4>LINHAS TERRESTRES DE MOÇAMBIQUE</h4>
         <ul>
             <li>
-                <h5>Get our UI KIT for free</h5></li>
-            <li><a target="_blank" href="http://mdbootstrap.com/getting-started/" class="btn btn-info" rel="nofollow">Sign up!</a></li>
-            <li><a target="_blank" href="http://mdbootstrap.com/material-design-for-bootstrap/" class="btn btn-default" rel="nofollow">Learn more</a></li>
+                <h5>Visite o nosso website</h5></li>
+            {{--<li><a target="_blank" href="http://mdbootstrap.com/getting-started/" class="btn btn-info" rel="nofollow">Sign up!</a></li>--}}
+            {{--<li><a target="_blank" href="http://mdbootstrap.com/material-design-for-bootstrap/" class="btn btn-default" rel="nofollow">Learn more</a></li>--}}
         </ul>
     </div>
     <!--/.Call to action-->

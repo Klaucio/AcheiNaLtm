@@ -14,7 +14,10 @@
                     <thead>
                     <tr>
                         <th>{{ trans('quickadmin::admin.users-index-name') }}</th>
-                        <th>&nbsp;</th>
+                        {{--<th>Telefone</th>--}}
+                        <th>Email</th>
+                        <th>Data Registo</th>
+                        <th></th>
                     </tr>
                     </thead>
 
@@ -22,6 +25,9 @@
                     @foreach ($users as $user)
                         <tr>
                             <td>{{ $user->name }}</td>
+{{--                            <td>{{ $user->first()->utentes->telefone }}</td>--}}
+                            <td>{{ $user->email }}</td>
+                            <td>{{ $user->created_at }}</td>
                             <td>
                                 {!! link_to_route('users.edit', trans('quickadmin::admin.users-index-edit'), [$user->id], ['class' => 'btn btn-xs btn-info']) !!}
                                 {!! Form::open(['style' => 'display: inline-block;', 'method' => 'DELETE', 'onsubmit' => 'return confirm(\'' . trans('quickadmin::admin.users-index-are_you_sure') . '\');',  'route' => array('users.destroy', $user->id)]) !!}

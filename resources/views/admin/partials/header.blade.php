@@ -7,43 +7,33 @@
         {{ trans('quickadmin::admin.partials-header-title') }}
     </title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <meta http-equiv="X-UA-Compatible"
-          content="IE=edge">
-    <meta content="width=device-width, initial-scale=1.0"
-          name="viewport"/>
-    <meta http-equiv="Content-type"
-          content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta http-equiv="Content-type"  content="text/html; charset=utf-8">
 
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all"
-          rel="stylesheet"
-          type="text/css"/>
-    <link rel="stylesheet"
-          href="{{ url('quickadmin/css') }}/font-awesome.min.css"/>
-    <link rel="stylesheet"
-          href="{{ url('quickadmin/css') }}/bootstrap.min.css"/>
-    <link rel="stylesheet"
-          href="{{ url('quickadmin/css') }}/components.css"/>
-    <link rel="stylesheet"
-          href="{{ url('quickadmin/css') }}/quickadmin-layout.css"/>
-    <link rel="stylesheet"
-          href="{{ url('quickadmin/css') }}/quickadmin-theme-default.css"/>
-    <link rel="stylesheet"
-          href="https://code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css">
-    <link rel="stylesheet"
-          href="//cdn.datatables.net/1.10.9/css/jquery.dataTables.min.css"/>
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/jquery-ui-timepicker-addon/1.4.5/jquery-ui-timepicker-addon.min.css"/>
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.standalone.min.css"/>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet"  href="https://code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet"  href="//cdn.datatables.net/1.10.9/css/jquery.dataTables.min.css"/>
+    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/jquery-ui-timepicker-addon/1.4.5/jquery-ui-timepicker-addon.min.css"/>
+    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.standalone.min.css"/>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+    {{--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">--}}
+
 
     <!-- Bootstrap core CSS -->
+    <link rel="stylesheet"  href="{{ url('quickadmin/css') }}/font-awesome.min.css"/>
+    <link rel="stylesheet"  href="{{ url('quickadmin/css') }}/bootstrap.min.css"/>
+    <link rel="stylesheet"  href="{{ url('quickadmin/css') }}/components.css"/>
+    <link rel="stylesheet"  href="{{ url('quickadmin/css') }}/quickadmin-layout.css"/>
+    <link rel="stylesheet"  href="{{ url('quickadmin/css') }}/quickadmin-theme-default.css"/>
     {{--<link href="{{ url('css')}}/bootstrap.min.css" rel="stylesheet">--}}
 
     <!-- Material Design Bootstrap -->
     <link href="{{ url('css')}}/mdb.min.css" rel="stylesheet">
     <link href="{{ url('css')}}/style.css" rel="stylesheet">
+    {{--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">--}}
+
 
     <!-- Your custom styles (optional) -->
 
@@ -114,26 +104,6 @@
         }
     </style>
 
-    {{--//fields dinamicos--}}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- SCRIPTS -->
-    <!-- JQuery -->
-    <script type="text/javascript" src="{{ url('js')}}/jquery-1.12.4.js"></script>
-    <!-- Bootstrap tooltips -->
-    <script type="text/javascript" src="{{ url('js')}}/tether.min.js"></script>
-    <!-- Bootstrap core JavaScript -->
-    <script type="text/javascript" src="{{ url('js')}}/bootstrap.min.js"></script>
-    <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="{{ url('js')}}/mdb.min.js"></script>
-    <!-- Chart.js para dados estatísticos -->
-    <script type="text/javascript" src="{{ url('js')}}/Chart.min.js"></script>
-
-
-    <script>
-        new WOW().init();
-    </script>
-    {{--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">--}}
-    {{--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>--}}
 </head>
 
 <body class="page-header-fixed">
