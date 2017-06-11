@@ -12,11 +12,11 @@ class Item extends Model
 
     public function bagagem()
     {
-        return $this->belongsTo(Bagagem::class);
+        return $this->belongsTo(Bagagem::class, 'bagagem_id');
     }
     public function encomenda()
     {
-        return $this->belongsTo(Encomenda::class);
+        return $this->belongsTo(Encomenda::class, 'encomenda_id');
     }
 
 }

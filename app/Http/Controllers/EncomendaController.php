@@ -18,6 +18,7 @@ class EncomendaController extends Controller
     {
         $encomendas=Encomenda::with('utentes')->get();
 //        dd($encomendas->first()->utentes);
+        
         return view('admin.encomendas.index')->with('encomendas',$encomendas);
     }
 

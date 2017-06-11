@@ -16,13 +16,12 @@ class ItemController extends Controller
     public function index()
     {
         //
-        $devlist = DB::table('encomendas')
-            ->select(DB::raw('MONTHNAME(updated_at) as month'), DB::raw("DATE_FORMAT(updated_at,'%Y-%m') as monthNum"), DB::raw('count(*) as encomendas'))
-            ->groupBy('monthNum')
-            ->get();
+//        $devlist = DB::table('encomendas')
+//            ->select(DB::raw('MONTHNAME(updated_at) as month'), DB::raw("DATE_FORMAT(updated_at,'%Y-%m') as monthNum"), DB::raw('count(*) as encomendas'))
+//            ->groupBy('monthNum')
+//            ->get();
 
-        return view('admin.items.estatisticas')
-            ->with('devlist',$devlist );
+        return view('admin.items.estatisticas');
 //        return response()->json($devlist);
 
     }
@@ -96,8 +95,7 @@ class ItemController extends Controller
 //        $devlist = array(1,2,3);
         $encomendas = DB::table('encomendas')
             ->select(DB::raw('MONTHNAME(updated_at) as month'), DB::raw("DATE_FORMAT(updated_at,'%Y-%m') as monthNum"), DB::raw('count(*) as encomendas'))
-            ->groupBy('monthNum')
-            ->get();
+            ->groupBy('monthNum')->get();
 
 //        return view('chartjs')
 //            ->with('viewer',$devlist);
@@ -108,6 +106,6 @@ class ItemController extends Controller
 //            'jan_confirmados' =>30
 //        ]);
 
-        return response()->json(compact('encomendas'));
+        return response()->json($encomendas);
     }
 }

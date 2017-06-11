@@ -7,15 +7,16 @@ $(document).ready(function () {
 
         success:function (result) {
             //Sampel Line Chart
-            window.alert(result.length)
+            console.log(result.length)
             var labels = [],data=[];
             for (var i = 0; i < result.length; i++) {
-                // labels.push(result[i].month);
-                // data.push(result[i].numMonth);
-                console.log(result[i].month);
+                labels.push(result[i].month);
+                data.push(result[i].numMonth);
+                // console.log(result[i].month);
             }
             var LineChartSampleData = {
-                labels: ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Novembro", "Dezembro "],
+                labels:labels,
+                    // ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Novembro", "Dezembro "],
                 datasets: [{
                     label: "Todos Pedidos",
                     fillColor: "rgba(220,220,220,0.2)",
@@ -24,7 +25,7 @@ $(document).ready(function () {
                     pointStrokeColor: "#fff",
                     pointHighlightFill: "#fff",
                     pointHighlightStroke: "rgba(220,220,220,1)",
-                    data:   [20,2,3,4,5,6,7,8,9,11,12,13]
+                    data: data
                 }, {
                     label: "Pedidos Confirmados",
                     fillColor: "rgba(151,187,205,0.2)",
