@@ -122,14 +122,20 @@
                         <div class="info">
                             <h4 class="card-title title"><strong>{{ $value->designacao }}
                                     <span class="label label-default label-pill pull-right"></span></strong></h4>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+
+                            <h6 class="card-text " data-toggle="tooltip" data-placement="top" title="Nome do receptor do item">
+                                <i class="fa fa-user prefix">{{$value->nome_receptor}}</i>
+                            </h6 >
+                            <h6 class="card-text destino" data-toggle="tooltip" data-placement="top" title="Destino">
+                                <i class="fa fa-location-arrow" aria-hidden="true">{{$value->destino}}</i></h6>
 
 
                             <ul>
-                                {{--<li style="width:33%;">1 103 <span class="fa fa-envelope"></span></li>--}}
-                                {{--<li style="width:34%;">3 <span class="fa fa-question"></span></li>--}}
-                                <li style="width:33%;"><span><a href="#" class="btn btn-info">Read more</a></span></li>
+                                <li style="width:36%;" data-toggle="tooltip" data-placement="top" title="Data do envio">
+                                     <span class="fa fa-calendar">{{$value->created_at}}</span></li>
+                                <li style="width:40%;"><span><a href="#" class="btn btn-info">Read more</a></span></li>
                             </ul>
+
 
                         </div>
                         <div class="social">

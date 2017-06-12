@@ -22,14 +22,11 @@ class HomeController extends Controller
 //        $encomendas=null;
 
 
-        $items=DB::table('items')->where('estado','=','Perdido')->orderBy('id','desc')->paginate(6);
-        $users = DB::table('items')
-//            ->join('bagagems', 'bagagems.id', '=', 'items.bagagem_id')
+//        $bagagens=DB::table('items')->join('bagagems', 'bagagems.id', '=', 'items.bagagem_id')->get();
+        $items = DB::table('items')
             ->join('encomendas', 'encomendas.id', '=', 'items.encomenda_id')
-//            ->select('users.*', 'contacts.phone', 'orders.price')
-            ->get();
-        dd($users);
-
+            ->orderBy('encomendas.created_at','desc')->paginate(6);
+//        dd($items);
 //        $items=Item::with('bagagens')->get();
 //        $items=DB::table('items')->where('estado','=','Achado')->orderBy('id','desc')->paginate(6);
 //        $items=DB::table('items')->where('estado','=','Perdido')->get();

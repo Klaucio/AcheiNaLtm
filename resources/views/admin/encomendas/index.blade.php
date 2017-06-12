@@ -25,6 +25,7 @@
                             <th>Destino</th>
                             <th>Data Envio</th>
                             <th>Preço</th>
+                            {{--<th></th>--}}
                         </tr>
                     </thead>
 
@@ -41,6 +42,13 @@
                                 <td>{{$encomenda->destino}}</td>
                                 <td>{{$encomenda->created_at}}</td>
                                 <td>MZN {{$encomenda->preco}}</td>
+                                {{--<td>--}}
+                                    {{--<i class="fa fa-eye" aria-hidden="true"></i>--}}
+                                    {{--{!! link_to_route('users.edit', trans('quickadmin::admin.users-index-edit'), [$encomenda->id], ['class' => 'btn btn-xs btn-info']) !!}--}}
+                                    {{--{!! Form::open(['style' => 'display: inline-block;', 'method' => 'DELETE', 'onsubmit' => 'return confirm(\'' . trans('quickadmin::admin.users-index-are_you_sure') . '\');',  'route' => array('users.destroy', $encomenda->id)]) !!}--}}
+                                    {{--{!! Form::submit(trans('quickadmin::admin.users-index-delete'), array('class' => 'btn btn-xs btn-danger')) !!}--}}
+                                    {{--{!! Form::close() !!}--}}
+                                {{--</td>--}}
                             </tr>
                         @endforeach
                     </tbody>
