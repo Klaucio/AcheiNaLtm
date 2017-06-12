@@ -26,6 +26,7 @@ Route::post('updateachados','AchadosController@update');
 Route::get('searchlevant','LevantamentoController@edit');
 Route::post('updatelevant','LevantamentoController@update');
 Route::get('getChart', 'ItemController@getChart')->name('getChart');
+Route::get('getChartPie', 'ItemController@getChart1')->name('getChartPie');
 
 Route::get('aaa', function(){
     return view('aaa');

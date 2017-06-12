@@ -4,6 +4,25 @@
 
     {{--{{ trans('quickadmin::admin.dashboard-title') }}--}}
 
+    <div class="row">
+        <div class="col-sm-10 col-sm-offset-2">
+            {{--            <h1>{{ trans('quickadmin::admin.users-create-create_user') }}</h1>--}}
+
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        {!! implode('', $errors->all('
+                        <li class="error">:message</li>
+                        ')) !!}
+                    </ul>
+                </div>
+            @endif
+
+
+        </div>
+
+
+    </div>
     <div class="container">
         <div class="row">
             <!--First columnn-->
@@ -61,8 +80,9 @@
     </div>
     <div class="row">
         <center>
-{{--            {{$items->render()}}--}}
+            {{--            {{$items->render()}}--}}
         </center>
 
     </div>
+
 @endsection

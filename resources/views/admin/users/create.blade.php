@@ -22,7 +22,7 @@
         <div class="card-block">
 
             <!--Header-->
-            <div class="form-header  purple darken-4">
+            <div class="form-header  primary-color-dark darken-4">
                 <h3>{{ trans('quickadmin::admin.users-create-create_user') }}</h3>
             </div>
             <div class="row">

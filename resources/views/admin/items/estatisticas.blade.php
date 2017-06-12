@@ -1,13 +1,40 @@
 @extends('admin.layouts.master')
 @section('content')
-    <div class="container">
-        <div class="row">
-            </br>
-            </br>
-            <h1 class="text-center">Grafico de Pedidos</h1>
 
-            <div class="content">
+    <div class="row">
+        <div class="col-sm-10 col-sm-offset-2">
+            {{--            <h1>{{ trans('quickadmin::admin.users-create-create_user') }}</h1>--}}
 
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        {!! implode('', $errors->all('
+                        <li class="error">:message</li>
+                        ')) !!}
+                    </ul>
+                </div>
+            @endif
+        </div>
+    </div>
+    <!--Form with header-->
+    <div class="card">
+        <div class="card-block">
+
+            <!--Header-->
+            <div class="form-header  primary-color-dark darken-4">
+                <h3>
+                    {!! link_to_route('users.edit', trans('quickadmin::admin.users-index-edit'), ['class' => 'btn btn-xs btn-info']) !!}
+                    <div class="row">
+                        <div class="col-md-2">
+                            <span><a href="items" class="btn btn-info">Encomendas</a></span>
+                        </div>
+                        <div class="col-md-2">
+                            <span><a href="#" class="btn btn-info">Global</a></span>
+                        </div>
+                    </div>
+                </h3>
+            </div>
+            <div class="row">
 
                 <div class="container">
                     <div class="row">
@@ -68,8 +95,23 @@
             </div>
 
 
+
         </div>
+
+        <!--Footer-->
+        <div class="modal-footer">
+            {{--<div class="text-center">--}}
+            {{--<button class="btn ">Login</button>--}}
+            {{--</div>--}}
+            {{--<div class="form-group">--}}
+                {{--<div class="text-center">--}}
+                    {{--{!! Form::submit(trans('quickadmin::admin.users-create-btncreate'), ['class' => 'btn btn-deep-purple']) !!}--}}{{--btn btn-primary--}}
+                {{--</div>--}}
+            {{--</div>--}}
+        </div>
+
     </div>
+    <!--/Form with header-->
 
 
 @endsection

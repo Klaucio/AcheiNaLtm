@@ -11,8 +11,8 @@ $(document).ready(function () {
             var labels = [],data=[];
             for (var i = 0; i < result.length; i++) {
                 labels.push(result[i].month);
-                data.push(result[i].numMonth);
-                // console.log(result[i].month);
+                data.push(result[i].encomendas);
+                console.log(result[i].encomendas);
             }
             var LineChartSampleData = {
                 labels:labels,
@@ -34,34 +34,35 @@ $(document).ready(function () {
                     pointStrokeColor: "#fff",
                     pointHighlightFill: "#fff",
                     pointHighlightStroke: "rgba(151,187,205,1)",
-                    data:   [80,2,3,4,5,6,7,8,9,11,12,13]
+                    data:  data
+                        // [80,2,3,4,5,6,7,8,9,11,12,13]
                     // data.jan_confirmados
 
                 }]
             };
 
             //Sampel Bar Chart
-            var BarChartSampleData = {
-                labels: ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Novembro", "Dezembro "],
-                datasets: [
-                    {
-                        label: "My First dataset",
-                        fillColor: "rgba(220,220,220,0.5)",
-                        strokeColor: "rgba(220,220,220,0.8)",
-                        highlightFill: "rgba(220,220,220,0.75)",
-                        highlightStroke: "rgba(220,220,220,1)",
-                        data: [90, 40, 50, 20, 56, 55, 50, 50, 50, 50, 50, 50]
-                    },
-                    {
-                        label: "My Second dataset",
-                        fillColor: "rgba(151,187,205,0.5)",
-                        strokeColor: "rgba(151,187,205,0.8)",
-                        highlightFill: "rgba(151,187,205,0.75)",
-                        highlightStroke: "rgba(151,187,205,1)",
-                        data: [40, 30, 40, 19, 47, 27, 39, 39, 39, 39, 39, 39]
-                    }
-                ]
-            };
+            // var BarChartSampleData = {
+            //     labels: ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Novembro", "Dezembro "],
+            //     datasets: [
+            //         {
+            //             label: "My First dataset",
+            //             fillColor: "rgba(220,220,220,0.5)",
+            //             strokeColor: "rgba(220,220,220,0.8)",
+            //             highlightFill: "rgba(220,220,220,0.75)",
+            //             highlightStroke: "rgba(220,220,220,1)",
+            //             data: [90, 40, 50, 20, 56, 55, 50, 50, 50, 50, 50, 50]
+            //         },
+            //         {
+            //             label: "My Second dataset",
+            //             fillColor: "rgba(151,187,205,0.5)",
+            //             strokeColor: "rgba(151,187,205,0.8)",
+            //             highlightFill: "rgba(151,187,205,0.75)",
+            //             highlightStroke: "rgba(151,187,205,1)",
+            //             data: [40, 30, 40, 19, 47, 27, 39, 39, 39, 39, 39, 39]
+            //         }
+            //     ]
+            // };
 
             // //Sampel Pie Doughnut Chart
             var PieDoughnutChartSampleData = [

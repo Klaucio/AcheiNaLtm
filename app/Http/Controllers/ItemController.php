@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Item;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\View\View;
@@ -94,7 +95,7 @@ class ItemController extends Controller
     public function getChart(){
 //        $devlist = array(1,2,3);
         $encomendas = DB::table('encomendas')
-            ->select(DB::raw('MONTHNAME(updated_at) as month'), DB::raw("DATE_FORMAT(updated_at,'%Y-%m') as monthNum"), DB::raw('count(*) as encomendas'))
+            ->select(DB::raw('MONTHNAME(created_at) as month'), DB::raw("DATE_FORMAT(created_at,'%Y-%m') as monthNum"), DB::raw('count(*) as encomendas'))
             ->groupBy('monthNum')->get();
 
 //        return view('chartjs')
@@ -107,5 +108,15 @@ class ItemController extends Controller
 //        ]);
 
         return response()->json($encomendas);
+    }
+    public function getChart1(){
+//        $devlist = array(1,2,3);
+        $encomendas = Item::where('estado','<>', 'NULL')
+            ->where('encomenda_id','<>','Null')->count();
+        $bagagens = Item::where('estado','<>', 'NULL')
+            ->where('bagagens_id','<>','Null')->count();
+
+
+        return response()->json($encomendas,$bagagens);
     }
 }
