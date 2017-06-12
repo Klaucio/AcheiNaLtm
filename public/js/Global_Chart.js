@@ -49,13 +49,13 @@ $(document).ready(function () {
             ]
 
 
-            // window.LineChartSample = new Chart(document.getElementById("line-chart-sample").getContext("2d")).Line(LineChartSampleData,{
-            //     responsive:true
-            // });
-            //
-            // window.BarChartSample = new Chart(document.getElementById("bar-chart-sample").getContext("2d")).Bar(BarChartSampleData,{
-            //     responsive:true
-            // });
+            window.LineChartSample = new Chart(document.getElementById("line-chart-sample").getContext("2d")).Line(LineChartSampleData,{
+                responsive:true
+            });
+
+            window.BarChartSample = new Chart(document.getElementById("bar-chart-sample").getContext("2d")).Bar(BarChartSampleData,{
+                responsive:true
+            });
 
             window.PieChartSample = new Chart(document.getElementById("pie-chart-sample").getContext("2d")).Pie(PieDoughnutChartSampleData,{
                 responsive:true

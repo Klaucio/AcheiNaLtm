@@ -119,4 +119,9 @@ class ItemController extends Controller
 
         return response()->json($encomendas,$bagagens);
     }
+    public function getGlobal(){
+//
+
+        return view('admin.items.global');
+    }
 }

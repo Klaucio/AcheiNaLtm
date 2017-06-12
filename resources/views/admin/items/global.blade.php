@@ -3,7 +3,7 @@
 
     <div class="row">
         <div class="col-sm-10 col-sm-offset-2">
-            {{--            <h1>{{ trans('quickadmin::admin.users-create-create_user') }}</h1>--}}
+                        <h1>{{ trans('quickadmin::admin.users-create-create_user') }}</h1>
 
             @if ($errors->any())
                 <div class="alert alert-danger">
@@ -22,7 +22,9 @@
 
             <!--Header-->
             <div class="form-header  primary-color-dark darken-4">
-                <h3> Gráfico Mensal de Perdidos
+                <h3>
+                     Gráfico Geral Perdidos
+
                     <div class="row">
                         <div class="col-md-2">
                             <span><a href="items" class="btn btn-info">Encomendas</a></span>
@@ -40,22 +42,10 @@
                         </br>
                         </br>
 
-                        <div class="col-md-8 col-md-offset-2">
-                            <h2 class="text-center">Grafico de Pedidos Mensais</h2>
-                            <div class="sample-chart-wrapper">
-                                <canvas id="line-chart-sample" height="120"></canvas>
-                            </div>
-                        </div>
-                        <div class="col-md-8 col-md-offset-2">
-                            <div class="sample-chart-wrapper">
-                                <canvas id="bar-chart-sample" height="120"></canvas>
-                            </div>
-                        </div>
 
 
                         <div class="col-md-6 col-md-offset-3">
                             <br/>
-                            {{--<h2 class="text-center"></h2>--}}
 
                             <div class="col-md-8">
                                 <div class="sample-chart-wrapper">
@@ -69,13 +59,13 @@
                                     <div class="" style="padding-top: 10px;">
 
                                         <div  style="background-color: #5AD3D1; margin-left: 10px; height: 30px;">
-                                            Pedidos Confirmados
+                                            Encomendas Perdidas
                                         </div>
                                     </div>
 
                                     <div class="" style="padding-top: 10px;">
                                         <div  style="background-color: #F7464A; margin-left: 10px; height: 30px;">
-                                            Pedidos Não Confirmados
+                                            Bagagens Perdidas
                                         </div>
                                     </div>
 
@@ -103,9 +93,9 @@
             {{--<button class="btn ">Login</button>--}}
             {{--</div>--}}
             {{--<div class="form-group">--}}
-                {{--<div class="text-center">--}}
-                    {{--{!! Form::submit(trans('quickadmin::admin.users-create-btncreate'), ['class' => 'btn btn-deep-purple']) !!}--}}{{--btn btn-primary--}}
-                {{--</div>--}}
+            {{--<div class="text-center">--}}
+            {{--{!! Form::submit(trans('quickadmin::admin.users-create-btncreate'), ['class' => 'btn btn-deep-purple']) !!}--}}{{--btn btn-primary--}}
+            {{--</div>--}}
             {{--</div>--}}
         </div>
 
@@ -118,7 +108,7 @@
 @section('javascript')
     {{--<script type="text/javascript" src="{{ url('js')}}/Chart.min.js"></script>--}}
 
-    <script src="{{ url('js')}}/encomendas.js"></script>
+    <script src="{{ url('js')}}/Global_Chart.js"></script>
     {{--<script src="{{url('js1/jquery-3.1.1.min.js')}}"></script>--}}
     {{--<script src="{{url('js1/bootstrap.min.js')}}"></script>--}}
     {{--<script src="{{url('js1/chartjs/chart.min.js')}}"></script>--}}
